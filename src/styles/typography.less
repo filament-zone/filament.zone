@@ -1,0 +1,70 @@
+@import 'src/styles/colors.less';
+
+h1 {
+	color: @color-pink;
+	font-size: 3.125rem;
+	font-family: 'GT-Eesti-Display-Medium';
+	font-style: medium;
+	line-height: 120%;
+}
+
+article {
+	font-family: 'Satoshi-Regular';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.125rem;
+	line-height: 150%;
+}
+
+article h2 {
+	font-family: 'GT-Eesti-Display-Regular';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.875rem;
+	line-height: 150%;
+
+	&:not(:first-of-type) {
+		margin-top: 2rem;
+	}
+}
+
+article h3 {
+	margin-top: 1.5rem;
+
+	font-family: 'GT-Eesti-Display-Regular';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.5rem;
+	line-height: 150%;
+}
+
+article p {
+	margin-top: 1rem;
+}
+
+article strong {
+	font-family: 'Satoshi-Bold';
+}
+
+article ol,
+article ul {
+	margin: 1rem 0;
+	padding-left: 2.5rem;
+
+	& li:not(:last-of-type) {
+		margin-bottom: 0.25rem;
+	}
+
+	& li p {
+		margin: 0;
+	}
+
+	& ol,
+	& ul {
+		margin: 0.2rem 0;
+	}
+}
+
+article hr {
+	margin: 4rem 0;
+}
