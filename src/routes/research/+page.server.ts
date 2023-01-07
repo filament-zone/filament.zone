@@ -1,4 +1,4 @@
-import { publications } from 'cms/publications.json';
+import { publications } from 'cms/research.json';
 
 export const load = async () => {
 	return {

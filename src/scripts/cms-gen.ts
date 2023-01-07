@@ -29,6 +29,6 @@ for (const file of files.filter((file) => {
 }
 
 const out = JSON.stringify({ publications: publications });
-await writeFile('./src/cms/publications.json', out);
+await writeFile('./src/cms/research.json', out);
 
 export {};
