@@ -16,11 +16,11 @@
 
 			<Container>
 				<div class="hero">
-					<h1>Pulzaar is the blockspace segment scheduler for the Interchain</h1>
+					<h1>Pulzaar coördinates decentralized blockspace for the Interchain</h1>
 					<p>
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-						has been the industry's standard dummy text ever since the 1500s, when an unknown
-						printer took a galley of type and scrambled it to make a type specimen book.
+						* solution * ibc connected, cosmos-sdk chains, cosmwasm chains * enables outsourcing of
+						segmented block construction * to a govnernance-algined, efficient market * to maximize
+						the aggregated value for the entire community
 					</p>
 					<Button
 						href="/research/lite-paper-pulzaar---trustless-block-segment-auctions-for-the-interchain"
@@ -37,12 +37,8 @@
 		<Segment color={Color.White}>
 			<Container>
 				<div class="value">
-					<h2>Value for everyone</h2>
-					<p>
-						Making Pulzaar permissionless, efficient and aligned with the cosmos vision of sovereign
-						zones are our main objectives, while ensuring that all participants in the value chain
-						receive a share of the value they generated.
-					</p>
+					<h2>Value for the community</h2>
+					<p>Pulzaar creates commitments which enable and incentivize payments to the community.</p>
 				</div>
 			</Container>
 		</Segment>
@@ -133,7 +129,7 @@
 		justify-content: space-between;
 		gap: 2.5rem;
 
-		max-width: 32rem;
+		max-width: 38rem;
 
 		padding: 3.5rem 0 13.75rem;
 
