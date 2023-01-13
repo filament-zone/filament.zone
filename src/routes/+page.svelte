@@ -18,9 +18,7 @@
 				<div class="hero">
 					<h1>Pulzaar coördinates decentralized blockspace for the Interchain</h1>
 					<p>
-						* solution * ibc connected, cosmos-sdk chains, cosmwasm chains * enables outsourcing of
-						segmented block construction * to a govnernance-algined, efficient market * to maximize
-						the aggregated value for the entire community
+                    Pulzaar is sovereign zone  that enables IBC connected chains to outsource segments of block construction  to a market of block builders which compete to maximize value accrual. Built on open interfaces, Pulzaar unlocks a new era of synchronous composability for the interchain.
 					</p>
 					<Button
 						href="/research/lite-paper-pulzaar---trustless-block-segment-auctions-for-the-interchain"
@@ -37,8 +35,13 @@
 		<Segment color={Color.White}>
 			<Container>
 				<div class="value">
-					<h2>Value for the community</h2>
-					<p>Pulzaar creates commitments which enable and incentivize payments to the community.</p>
+					<h2>A new era of composability</h2>
+                    <p>
+                    * The internet of blockchains has exploded x chains secured by y value
+                    * Each community provides unique value that  accessible for asynchronous composability over IBC
+                    * What's missing is a way to synchronize functionality provided by sovereign zones the way smart contracts compose on Ethereum
+                    * Pulzaar provides a set of open interfaces to accelerate synchronous composability of all IBC connected chains.
+					</p>
 				</div>
 			</Container>
 		</Segment>
@@ -53,9 +56,9 @@
 						<div class="info alternate">
 							<h2>Searchers</h2>
 							<p>
-								Proin et dui fringilla, luctus dui quis, placerat diam. Phasellus mollis eget mi sit
-								amet pretium. Fusce ligula dolor, tincidunt quis pharetra vel, interdum id felis.
-								Nunc aliquam pulvinar turpis in bibendum.
+                            * Searchers find opportunities from transaction order flow
+                            * Searcher buy blockspace from builders who provide execution guarantees
+                            * Pulzaar helps discover which builders have execution guarantees needed to execute cross chain strategies
 							</p>
 						</div>
 					</section>
@@ -66,11 +69,9 @@
 						<div class="info">
 							<h2>Builders</h2>
 							<p>
-								Aenean aliquam neque fermentum odio condimentum ullamcorper. Maecenas sed elementum
-								ipsum, in pulvinar orci. Proin consectetur velit sed vulputate laoreet. Duis ut
-								condimentum nibh. Suspendisse dictum consequat tincidunt.
+                            * Builders optimize construction of block segments
+                            * Builders use pulzaar to buy the right to build block segments ahead of time, and work with searchers to maximize the block value
 							</p>
-							.
 						</div>
 					</section>
 					<section>
@@ -80,9 +81,9 @@
 						<div class="info alternate">
 							<h2>Validators</h2>
 							<p>
-								Suspendisse auctor urna vitae risus volutpat consequat. Phasellus fringilla lectus
-								diam, in ultrices turpis sagittis eget. Mauris vitae neque a ipsum cursus gravida
-								sit amet eu arcu. Vestibulum commodo metus in cursus aliquam.
+                            * Validators propose entire blocks to the network
+                            * Proposer build segments blocks and outsource the rest to builders through pulzaar
+                            * Partial block construction with pulzaar provides optimal block construction while maintaining censorship resistance
 							</p>
 						</div>
 					</section>
@@ -99,9 +100,8 @@
 					<div class="info">
 						<h2>Reach for the Stars</h2>
 						<p>
-							Etiam maximus erat massa, sed ornare mi auctor id. Cras at felis sem. Quisque
-							vestibulum lacus eu dapibus lacinia. Curabitur viverra tristique sem vitae
-							consectetur.
+                        * Pulzaar is initiated by Mekatek
+                        * It will grow to become community owned and governed
 						</p>
 						<Button href="/community" label="Join the Community" title="Join the Community" />
 					</div>
