@@ -26,7 +26,7 @@
 		.use(MarkdownItAnchor)
 		.use(MarkdownItFootnote);
 	md.renderer.rules.footnote_block_open = () => {
-		return '<h3 id="footnotes">Footnotes</h4>\n' + '<ol>\n';
+		return '<hr /><h3 id="footnotes">Footnotes</h4>\n' + '<ol>\n';
 	};
 	md.renderer.rules.footnote_block_close = () => {
 		return '</ol>';

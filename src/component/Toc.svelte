@@ -42,20 +42,24 @@
 		font-family: 'Satoshi-Regular';
 	}
 
-	li a ul {
+	li ul {
 		list-style: none;
 	}
 
-	li a ul li:first-of-type {
+	li ul li:first-of-type {
 		margin-top: 8px;
 	}
 
-	li a ul li:last-of-type {
+	li ul li:last-of-type {
 		margin-bottom: 8px;
 	}
 
-	li a ul li a {
+	li ul li a {
 		margin-bottom: 8px;
 		padding-left: 32px;
+
+		& span {
+			width: 40px;
+		}
 	}
 </style>
