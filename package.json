@@ -13,7 +13,7 @@
 		"coverage": "vitest run --coverage",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
-		"cms-gen": "ts-node -r tsconfig-paths/register src/scripts/cms-gen.ts",
+		"cms-gen": "node --no-warnings=ExperimentalWarning --loader ts-node/esm src/scripts/cms-gen.ts",
 		"prepare": "husky install"
 	},
 	"devDependencies": {
