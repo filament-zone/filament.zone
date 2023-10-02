@@ -4,11 +4,17 @@
 	import Divider from 'component/Divider.svelte';
 
 	export let color: Color = Color.Pink;
-	export let img: string;
+	export let img: string | null = null;
 </script>
 
 <div class="frame {color}">
-	<img src={img} />
+  {#if img}
+    <img src={img} />
+  {/if}
+
+  <div class="content">
+    <slot />
+  </div>
 	<div class="divider">
 		<Divider {color} small />
 	</div>
@@ -26,8 +32,11 @@
 		overflow: hidden;
 		position: relative;
 
+    padding: 2.5rem 2.5rem 4rem 2.5rem;
+
+    background: rgba(22, 39, 61, 1);
 		border: 4px solid @color-pink;
-		border-radius: 20px;
+		border-radius: 1.25rem;
 
 		&.black {
 			border-color: @color-primary-black;
@@ -49,6 +58,12 @@
 			height: auto;
 			width: 100%;
 		}
+
+    div.content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
 
 		div.divider {
 			position: absolute;

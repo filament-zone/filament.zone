@@ -1,1 +1,1 @@
-export const origin = 'https://pulzaar.zone';
+export const origin = 'https://filament.zone';

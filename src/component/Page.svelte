@@ -7,13 +7,12 @@
 	import Container from 'component/Container.svelte';
 	import Divider from 'component/Divider.svelte';
 	import Logo from 'component/Logo.svelte';
-	import Navigation from 'component/Navigation.svelte';
 	import Segment from 'component/Segment.svelte';
 
 	$: origin = $page.url.origin;
 	$: pathname = $page.url.pathname;
 
-	export let title = 'Pulzaar';
+	export let title = 'Filament';
 	export let description = '';
 	export let image = `${origin}/img/logo-type.png`;
 	export let url = `${origin}${pathname}`;
@@ -44,7 +43,6 @@
 					</div>
 					<div class="break" />
 					<div class="navigation">
-						<Navigation />
 					</div>
 				</div>
 			</Container>
@@ -107,8 +105,8 @@
 		& div.comms {
 			order: 3;
 
-			margin-left: 48px;
-			width: 160px;
+			margin-left: 3rem;
+      width: 5rem;
 		}
 
 		& div.navigation {

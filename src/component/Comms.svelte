@@ -1,7 +1,6 @@
 <script lang="ts">
 	import IconButton from 'component/IconButton.svelte';
 
-	import IconDiscord from 'icon/Discord.svelte';
 	import IconGithub from 'icon/Github.svelte';
 	import IconMail from 'icon/Mail.svelte';
 	import IconTwitter from 'icon/Twitter.svelte';
@@ -10,23 +9,18 @@
 </script>
 
 <ul>
-	<li>
-		<a href="https://github.com/pulzaar-zone" title="Pulzaar Github">
+  <li>
+		<a href="https://github.com/filament-zone" title="Pulzaar Github">
 			<IconButton {alternative}><IconGithub /></IconButton>
 		</a>
 	</li>
 	<li>
-		<a href="https://discord.gg/9dSbJpZG6C" title="Pulzaar Discord">
-			<IconButton {alternative}><IconDiscord /></IconButton>
-		</a>
-	</li>
-	<li>
-		<a href="https://twitter.com/pulzaar-zone" title="Pulzaar Twitter">
+		<a href="https://twitter.com/filamentzone" title="Filament Twitter">
 			<IconButton {alternative}><IconTwitter /></IconButton>
 		</a>
 	</li>
 	<li>
-		<a href="mailto:connect@pulzaar.zone" title="Pulzaar Mail">
+		<a href="mailto:connect@filament.zone" title="Filament Mail">
 			<IconButton {alternative}><IconMail /></IconButton>
 		</a>
 	</li>

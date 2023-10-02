@@ -4,116 +4,72 @@
 	import Button from 'component/Button.svelte';
 	import Frame from 'component/Frame.svelte';
 	import Container from 'component/Container.svelte';
-	import Divider from 'component/Divider.svelte';
-	import Page from 'component/Page.svelte';
+	import Logo from 'component/Logo.svelte';
+	import PageLanding from 'component/PageLanding.svelte';
 	import Segment from 'component/Segment.svelte';
 </script>
 
-<Page>
-	<div slot="hero">
-		<Segment backgroundImage="/img/hero-landscape.png">
-			<Divider />
-
+<PageLanding>
+	<div id="hero" slot="hero">
+    <div class="background">
 			<Container>
-				<div class="hero">
-					<h1>Pulzaar is the blockspace segment scheduler for the Interchain</h1>
+				<div class="hero-content">
+          <div class="logo">
+            <Logo />
+          </div>
+					<h1>Pioneering Interchain Connectivity</h1>
 					<p>
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-						has been the industry's standard dummy text ever since the 1500s, when an unknown
-						printer took a galley of type and scrambled it to make a type specimen book.
+          Step into the future with Filament - designed for unparalleled decentralized growth and connectivity. Envision a world of seamless experiences for protocols and users.
 					</p>
 					<Button
-						href="/research/lite-paper-pulzaar---trustless-block-segment-auctions-for-the-interchain"
-						label="Read the Lite Paper"
-						title="Lite Paper: Pulzaar - Trustless blockspace segment auctions for the Interchain" />
+						href=""
+						label="Learn More"
+            title=""
+            outline={Color.White} />
 				</div>
 			</Container>
-
-			<Divider color={Color.White} inverted />
-		</Segment>
+    </div>
 	</div>
 
 	<div class="content" slot="content">
-		<Segment color={Color.White}>
+    <Segment color={Color.BackgroundsDark}>
 			<Container>
-				<div class="value">
-					<h2>Value for everyone</h2>
-					<p>
-						Making Pulzaar permissionless, efficient and aligned with the cosmos vision of sovereign
-						zones are our main objectives, while ensuring that all participants in the value chain
-						receive a share of the value they generated.
-					</p>
-				</div>
-			</Container>
-		</Segment>
-		<Segment>
-			<Divider color={Color.White} />
-			<Container>
-				<div class="chain">
+				<div class="actors">
 					<section>
 						<div class="frame">
-							<Frame img="/img/searcher.png" />
+              <Frame>
+                <h2>For Campaigners</h2>
+                <p>Navigate the world of blockchains with Filament. Elevate your growth campaign in the vast Interchain landscape. Harness Numia's & Mekatek's ecosystem to connect with users that are most relevant to you.</p>
+                <div class="cta">
+                  <Button href="mailto:connect@filament.zone?subject=New campaign on Filamen" label="Launch Campaign" title="Launch Campaign" outline={Color.White} />
+                </div>
+                </Frame>
 						</div>
 						<div class="info alternate">
-							<h2>Searchers</h2>
-							<p>
-								Proin et dui fringilla, luctus dui quis, placerat diam. Phasellus mollis eget mi sit
-								amet pretium. Fusce ligula dolor, tincidunt quis pharetra vel, interdum id felis.
-								Nunc aliquam pulvinar turpis in bibendum.
-							</p>
+              <img src="/img/campaigner.png" alt="A robot campaigner" />
 						</div>
 					</section>
 					<section>
 						<div class="frame">
-							<Frame img="/img/builder.png" />
+              <Frame>
+                <h2>For Distributors</h2>
+                <p>
+                With Filament, become a pivotal connector in the expansive Internet of Blockchains. Extend your experiences to users and open new avenues of growth & revenue.
+                </p>
+                <div class="cta">
+                  <Button href="mailto:connect@filament.zone?subject=Join Filament as distributor" label="Join the Network" title="Join Filament as Distributor" outline={Color.White} />
+                </div>
+              </Frame>
 						</div>
 						<div class="info">
-							<h2>Builders</h2>
-							<p>
-								Aenean aliquam neque fermentum odio condimentum ullamcorper. Maecenas sed elementum
-								ipsum, in pulvinar orci. Proin consectetur velit sed vulputate laoreet. Duis ut
-								condimentum nibh. Suspendisse dictum consequat tincidunt.
-							</p>
-							.
+              <img src="/img/distributor.png" alt="A distributors store" />
 						</div>
 					</section>
-					<section>
-						<div class="frame">
-							<Frame img="/img/validator.png" />
-						</div>
-						<div class="info alternate">
-							<h2>Validators</h2>
-							<p>
-								Suspendisse auctor urna vitae risus volutpat consequat. Phasellus fringilla lectus
-								diam, in ultrices turpis sagittis eget. Mauris vitae neque a ipsum cursus gravida
-								sit amet eu arcu. Vestibulum commodo metus in cursus aliquam.
-							</p>
-						</div>
-					</section>
-				</div>
-			</Container>
-			<Divider color={Color.Cyan} inverted />
-		</Segment>
-		<Segment color={Color.Cyan}>
-			<Container>
-				<div class="community">
-					<div class="frame">
-						<Frame img="/img/community.png" color={Color.Blue} />
-					</div>
-					<div class="info">
-						<h2>Reach for the Stars</h2>
-						<p>
-							Etiam maximus erat massa, sed ornare mi auctor id. Cras at felis sem. Quisque
-							vestibulum lacus eu dapibus lacinia. Curabitur viverra tristique sem vitae
-							consectetur.
-						</p>
-						<Button href="/community" label="Join the Community" title="Join the Community" />
-					</div>
 				</div>
 			</Container>
 		</Segment>
 	</div>
-</Page>
+</PageLanding>
 
 <style lang="less">
 	@import 'src/styles/colors.less';
@@ -127,7 +83,30 @@
 		line-height: 180%;
 	}
 
-	div.hero {
+  div#hero {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+
+    div.background {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      height: 100%;
+      width: 100%;
+
+		  background-attachment: scroll;
+      background-image: 
+        linear-gradient(to bottom, rgba(255, 255, 255, 0) 65%, rgba(13, 13, 40, 1.0) 100%),
+        url('/img/hero-landscape.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+	}
+
+	div.hero-content {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -135,7 +114,7 @@
 
 		max-width: 32rem;
 
-		padding: 3.5rem 0 13.75rem;
+		padding: 12rem 0 18rem;
 
 		h1 {
 			color: @color-primary-white;
@@ -153,6 +132,10 @@
 			font-size: 1.375rem;
 			line-height: 180%;
 		}
+
+    div.logo {
+      height: 6.5rem;
+    }
 	}
 
 	div.content {
@@ -196,7 +179,7 @@
 		}
 	}
 
-	div.chain {
+	div.actors {
 		display: flex;
 		flex-direction: column;
 		gap: 5rem;
@@ -223,41 +206,24 @@
 				&.alternate {
 					order: 1;
 				}
-
-				h2 {
-					color: @color-primary-cyan;
-				}
-
-				p {
-					color: @color-primary-white;
-				}
 			}
-		}
-	}
 
-	div.community {
-		display: flex;
-		flex: 1;
-		flex-direction: row;
-		align-items: stretch;
-		justify-content: center;
-		gap: 6.25rem;
+      div.cta {
+        width: 16rem;
+      }
 
-		padding: 2.5rem 0;
+      h2 {
+        color: @color-primary-cyan;
+      }
 
-		div.info {
-			display: flex;
-			flex-direction: column;
-			flex-grow: 1;
-			gap: 2.5rem;
-			justify-content: center;
-
-			padding: 0.5rem 0;
+      p {
+        color: @color-primary-white;
+      }
 		}
 	}
 
 	@media @screen-s, @screen-xs, @screen-xxs {
-		div.hero {
+		div.hero-content {
 			justify-content: flex-end;
 
 			max-width: inherit;
@@ -271,9 +237,13 @@
 			p {
 				text-align: center;
 			}
+
+      div.logo {
+        align-self: center;
+      }
 		}
 
-		div.chain section {
+		div.actors section {
 			flex-direction: column;
 
 			div.info.alternate {
@@ -291,7 +261,7 @@
 			font-size: 1.125rem;
 		}
 
-		div.hero {
+		div.hero-content {
 			h1 {
 				font-size: 2.25rem;
 			}
@@ -299,7 +269,7 @@
 	}
 
 	@media @screen-xxs {
-		div.hero h1 {
+		div.hero-content h1 {
 			font-size: 1.875rem;
 		}
 	}

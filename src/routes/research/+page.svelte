@@ -15,7 +15,7 @@
 	const { publications } = data as { publications: Publication[] };
 </script>
 
-<Page title="Pulzzar Research" footerDividerColor={Color.White}>
+<Page title="Filament Research" footerDividerColor={Color.White}>
 	<Segment slot="hero">
 		<Container>
 			<h1>Research</h1>

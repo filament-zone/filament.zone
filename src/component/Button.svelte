@@ -1,10 +1,13 @@
 <script lang="ts">
+  import { Color } from '$lib/ui';
+
 	export let href: string;
 	export let label: string;
+  export let outline: Color = Color.Blue;
 	export let title: string;
 </script>
 
-<a {href} {title}>{label}</a>
+<a class={outline} {href} {title}>{label}</a>
 
 <style lang="less">
 	@import 'src/styles/colors.less';
@@ -17,9 +20,6 @@
 		padding: 1rem 1.875rem 1.375rem;
 		gap: 0.625rem;
 		isolation: isolate;
-
-		/* width: 253px; */
-		/* height: 64px; */
 
 		background: @color-beige;
 
@@ -39,6 +39,15 @@
 
 		&:hover {
 			background-color: @color-primary-white;
+			cursor: pointer;
 		}
+
+    &.blue {
+      border-color: @color-blue;
+    }
+
+    &.white {
+      border: 0.1rem solid @color-primary-white;
+    }
 	}
 </style>

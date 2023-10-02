@@ -13,10 +13,10 @@
 	import IconTwitter from 'icon/Twitter.svelte';
 </script>
 
-<Page title="Pulzaar Community" footerDividerColor={Color.White}>
+<Page title="Filament Community" footerDividerColor={Color.White}>
 	<Segment slot="hero">
 		<Container>
-			<h1>Join the Pulzaar Community</h1>
+			<h1>Join the Filament Community</h1>
 		</Container>
 	</Segment>
 
@@ -33,25 +33,25 @@
 				</div>
 				<ul>
 					<li>
-						<Card href="https://github.com/pulzaar-zone" title="Pulzaar Github">
+						<Card href="https://github.com/filament-zone" title="Filament Github">
 							Github
 							<IconGithub slot="icon" />
 						</Card>
 					</li>
 					<li>
-						<Card href="https://discord.gg/9dSbJpZG6C" title="Pulzaar Discord">
+						<Card href="https://discord.gg/9dSbJpZG6C" title="Filament Discord">
 							Discord
 							<IconDiscord slot="icon" />
 						</Card>
 					</li>
 					<li>
-						<Card href="https://twitter.com/pulzaar-zone" title="Pulzaar Twitter">
+						<Card href="https://twitter.com/filamentzone" title="Filament Twitter">
 							Twitter
 							<IconTwitter slot="icon" />
 						</Card>
 					</li>
 					<li>
-						<Card href="mailto:connect@pulzaar.zone" title="Pulzaar Mail">
+						<Card href="mailto:connect@filament.zone" title="Filament Mail">
 							Email
 							<IconMail slot="icon" />
 						</Card>

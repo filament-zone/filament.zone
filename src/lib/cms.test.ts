@@ -86,6 +86,6 @@ describe('titleToSlug', () => {
 	});
 
 	it('should lower case characters', () => {
-		expect(titleToSlug('pUlZAaR')).toBe('pulzaar');
+		expect(titleToSlug('fIlAMenT')).toBe('filament');
 	});
 });

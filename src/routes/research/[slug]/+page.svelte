@@ -36,7 +36,7 @@
 </script>
 
 <Page
-	title="{publication.metadata.title} | Pulzaar Research"
+	title="{publication.metadata.title} | Filament Research"
 	description={publication.metadata.teaser}
 	footerDividerColor={Color.White}>
 	<Segment slot="hero">

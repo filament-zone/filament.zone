@@ -9,6 +9,8 @@ export enum Color {
 	Cyan = 'cyan',
 	Pink = 'pink',
 	White = 'white',
+
+	BackgroundsDark = 'backgrounds-dark',
 }
 
 export enum Direction {

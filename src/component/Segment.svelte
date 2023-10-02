@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { Color } from '$lib/ui';
+	import type { Color } from '$lib/ui';
 
 	export let backgroundImage: string | null = null;
-	export let color: Color = Color.Blue;
+	export let color: Color | null = null;
 </script>
 
 <div class="segment {color}">
@@ -35,6 +35,10 @@
 		}
 		&.white {
 			background-color: @color-primary-white;
+		}
+
+		&.backgrounds-dark {
+			background-color: @color-backgrounds-dark;
 		}
 	}
 
