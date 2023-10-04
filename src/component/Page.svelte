@@ -42,8 +42,7 @@
 						<Comms />
 					</div>
 					<div class="break" />
-					<div class="navigation">
-					</div>
+					<div class="navigation"></div>
 				</div>
 			</Container>
 		</Segment>
@@ -106,7 +105,7 @@
 			order: 3;
 
 			margin-left: 3rem;
-      width: 5rem;
+			width: 5rem;
 		}
 
 		& div.navigation {

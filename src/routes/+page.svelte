@@ -11,58 +11,69 @@
 
 <PageLanding>
 	<div id="hero" slot="hero">
-    <div class="background">
+		<div class="background">
 			<Container>
 				<div class="hero-content">
-          <div class="logo">
-            <Logo />
-          </div>
+					<div class="logo">
+						<Logo />
+					</div>
 					<h1>Pioneering Interchain Connectivity</h1>
 					<p>
-          Step into the future with Filament - designed for unparalleled decentralized growth and connectivity. Envision a world of seamless experiences for protocols and users.
+						Step into the future with Filament - designed for unparalleled decentralized growth and
+						connectivity. Envision a world of seamless experiences for protocols and users.
 					</p>
-					<Button
-						href=""
-						label="Learn More"
-            title=""
-            outline={Color.White} />
+					<Button href="" label="Learn More" title="" outline={Color.White} />
 				</div>
 			</Container>
-    </div>
+		</div>
 	</div>
 
 	<div class="content" slot="content">
-    <Segment color={Color.BackgroundsDark}>
+		<Segment color={Color.BackgroundsDark}>
 			<Container>
 				<div class="actors">
 					<section>
 						<div class="frame">
-              <Frame>
-                <h2>For Campaigners</h2>
-                <p>Navigate the world of blockchains with Filament. Elevate your growth campaign in the vast Interchain landscape. Harness Numia's & Mekatek's ecosystem to connect with users that are most relevant to you.</p>
-                <div class="cta">
-                  <Button href="mailto:connect@filament.zone?subject=New campaign on Filamen" label="Launch Campaign" title="Launch Campaign" outline={Color.White} />
-                </div>
-                </Frame>
+							<Frame>
+								<h2>For Campaigners</h2>
+								<p>
+									Navigate the world of blockchains with Filament. Elevate your growth campaign in
+									the vast Interchain landscape. Harness Numia's & Mekatek's ecosystem to connect
+									with users that are most relevant to you.
+								</p>
+								<div class="cta">
+									<Button
+										href="mailto:connect@filament.zone?subject=New campaign on Filamen"
+										label="Launch Campaign"
+										title="Launch Campaign"
+										outline={Color.White} />
+								</div>
+							</Frame>
 						</div>
 						<div class="info alternate">
-              <img src="/img/campaigner.png" alt="A robot campaigner" />
+							<img src="/img/campaigner.png" alt="A robot campaigner" />
 						</div>
 					</section>
 					<section>
 						<div class="frame">
-              <Frame>
-                <h2>For Distributors</h2>
-                <p>
-                With Filament, become a pivotal connector in the expansive Internet of Blockchains. Extend your experiences to users and open new avenues of growth & revenue.
-                </p>
-                <div class="cta">
-                  <Button href="mailto:connect@filament.zone?subject=Join Filament as distributor" label="Join the Network" title="Join Filament as Distributor" outline={Color.White} />
-                </div>
-              </Frame>
+							<Frame>
+								<h2>For Distributors</h2>
+								<p>
+									With Filament, become a pivotal connector in the expansive Internet of
+									Blockchains. Extend your experiences to users and open new avenues of growth &
+									revenue.
+								</p>
+								<div class="cta">
+									<Button
+										href="mailto:connect@filament.zone?subject=Join Filament as distributor"
+										label="Join the Network"
+										title="Join Filament as Distributor"
+										outline={Color.White} />
+								</div>
+							</Frame>
 						</div>
 						<div class="info">
-              <img src="/img/distributor.png" alt="A distributors store" />
+							<img src="/img/distributor.png" alt="A distributors store" />
 						</div>
 					</section>
 				</div>
@@ -83,27 +94,30 @@
 		line-height: 180%;
 	}
 
-  div#hero {
+	div#hero {
 		display: flex;
 		flex: 1;
 		flex-direction: column;
 
-    div.background {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+		div.background {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
 
-      height: 100%;
-      width: 100%;
+			height: 100%;
+			width: 100%;
 
-		  background-attachment: scroll;
-      background-image: 
-        linear-gradient(to bottom, rgba(255, 255, 255, 0) 65%, rgba(13, 13, 40, 1.0) 100%),
-        url('/img/hero-landscape.png');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
+			background-attachment: scroll;
+			background-image: linear-gradient(
+					to bottom,
+					rgba(255, 255, 255, 0) 65%,
+					rgba(13, 13, 40, 1) 100%
+				),
+				url('/img/hero-landscape.png');
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
 	}
 
 	div.hero-content {
@@ -133,9 +147,9 @@
 			line-height: 180%;
 		}
 
-    div.logo {
-      height: 6.5rem;
-    }
+		div.logo {
+			height: 6.5rem;
+		}
 	}
 
 	div.content {
@@ -208,17 +222,17 @@
 				}
 			}
 
-      div.cta {
-        width: 16rem;
-      }
+			div.cta {
+				width: 16rem;
+			}
 
-      h2 {
-        color: @color-primary-cyan;
-      }
+			h2 {
+				color: @color-primary-cyan;
+			}
 
-      p {
-        color: @color-primary-white;
-      }
+			p {
+				color: @color-primary-white;
+			}
 		}
 	}
 
@@ -238,9 +252,9 @@
 				text-align: center;
 			}
 
-      div.logo {
-        align-self: center;
-      }
+			div.logo {
+				align-self: center;
+			}
 		}
 
 		div.actors section {

@@ -8,13 +8,13 @@
 </script>
 
 <div class="frame {color}">
-  {#if img}
-    <img src={img} />
-  {/if}
+	{#if img}
+		<img src={img} />
+	{/if}
 
-  <div class="content">
-    <slot />
-  </div>
+	<div class="content">
+		<slot />
+	</div>
 	<div class="divider">
 		<Divider {color} small />
 	</div>
@@ -32,9 +32,9 @@
 		overflow: hidden;
 		position: relative;
 
-    padding: 2.5rem 2.5rem 4rem 2.5rem;
+		padding: 2.5rem 2.5rem 4rem 2.5rem;
 
-    background: rgba(22, 39, 61, 1);
+		background: rgba(22, 39, 61, 1);
 		border: 4px solid @color-pink;
 		border-radius: 1.25rem;
 
@@ -59,11 +59,11 @@
 			width: 100%;
 		}
 
-    div.content {
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-    }
+		div.content {
+			display: flex;
+			flex-direction: column;
+			gap: 1.25rem;
+		}
 
 		div.divider {
 			position: absolute;

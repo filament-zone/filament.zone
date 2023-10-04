@@ -9,7 +9,7 @@
 </script>
 
 <ul>
-  <li>
+	<li>
 		<a href="https://github.com/filament-zone" title="Pulzaar Github">
 			<IconButton {alternative}><IconGithub /></IconButton>
 		</a>

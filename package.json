@@ -12,7 +12,7 @@
 		"test:watch": "vitest watch",
 		"coverage": "vitest run --coverage",
 		"lint": "prettier --check . && eslint .",
-		"format": "prettier --write .",
+		"format": "prettier --plugin prettier-plugin-svelte --write .",
 		"cms-gen": "node --no-warnings=ExperimentalWarning --loader ts-node/esm src/scripts/cms-gen.ts",
 		"prepare": "husky install"
 	},

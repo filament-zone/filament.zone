@@ -42,9 +42,9 @@
 		<Segment color={Color.BackgroundsDark}>
 			<Container>
 				<div id="footer">
-          <div class="logo">
-            <Logo inverted />
-          </div>
+					<div class="logo">
+						<Logo inverted />
+					</div>
 					<div class="comms">
 						<Comms alternative />
 					</div>
@@ -83,7 +83,7 @@
 			order: 3;
 
 			margin-left: 3rem;
-      width: 5rem;
+			width: 5rem;
 		}
 
 		& div.navigation {
@@ -95,7 +95,7 @@
 		display: flex;
 		flex: 1;
 
-    background-color: @color-backgrounds-dark;
+		background-color: @color-backgrounds-dark;
 	}
 
 	#footer {
@@ -106,9 +106,9 @@
 
 		padding: 2.5rem 0rem 3rem 0rem;
 
-    div.logo {
-      height: 3rem;
-    }
+		div.logo {
+			height: 3rem;
+		}
 	}
 
 	@media @screen-xs, @screen-s {

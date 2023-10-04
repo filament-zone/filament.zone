@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { Color } from '$lib/ui';
+	import { Color } from '$lib/ui';
 
 	export let href: string;
 	export let label: string;
-  export let outline: Color = Color.Blue;
+	export let outline: Color = Color.Blue;
 	export let title: string;
 </script>
 
@@ -42,12 +42,12 @@
 			cursor: pointer;
 		}
 
-    &.blue {
-      border-color: @color-blue;
-    }
+		&.blue {
+			border-color: @color-blue;
+		}
 
-    &.white {
-      border: 0.1rem solid @color-primary-white;
-    }
+		&.white {
+			border: 0.1rem solid @color-primary-white;
+		}
 	}
 </style>
