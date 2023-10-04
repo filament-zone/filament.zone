@@ -10,7 +10,7 @@
 
 <ul>
 	<li>
-		<a href="https://github.com/filament-zone" title="Pulzaar Github">
+		<a href="https://github.com/filament-zone" title="Filament Github">
 			<IconButton {alternative}><IconGithub /></IconButton>
 		</a>
 	</li>
