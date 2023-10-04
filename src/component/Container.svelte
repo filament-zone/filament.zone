@@ -21,18 +21,18 @@
 		width: 100%;
 
 		margin: 0 auto;
-		padding: 40px 80px 30px 80px;
+		padding: 2.5rem 5rem 1.875rem 5rem;
 	}
 
 	@media @screen-xs, @screen-s, @screen-m {
 		div {
-			padding: 40px 40px 30px 40px;
+			padding: 2.5rem 2.5rem 1.875rem 2.5rem;
 		}
 	}
 
 	@media @screen-xxs {
 		div {
-			padding: 30px;
+			padding: 0.5rem;
 		}
 	}
 </style>

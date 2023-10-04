@@ -263,6 +263,17 @@
 			div.info.alternate {
 				order: 3;
 			}
+
+			div.frame {
+				h2,
+				p {
+					text-align: center;
+				}
+			}
+
+			div.cta {
+				margin: 0 auto;
+			}
 		}
 
 		div.community {
@@ -278,6 +289,10 @@
 		div.hero-content {
 			h1 {
 				font-size: 2.25rem;
+			}
+
+			div.logo {
+				height: 4rem;
 			}
 		}
 	}

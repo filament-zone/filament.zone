@@ -22,7 +22,6 @@
 		display: flex;
 		flex: 1;
 		flex-direction: column;
-		/* justify-content: space-between; */
 
 		&.black {
 			background-color: @color-primary-black;

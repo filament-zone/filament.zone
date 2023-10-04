@@ -22,6 +22,7 @@
 
 <style lang="less">
 	@import 'src/styles/colors.less';
+	@import 'src/styles/responsive.less';
 
 	div.frame {
 		flex: none;
@@ -71,6 +72,12 @@
 
 			bottom: 0;
 			left: 0;
+		}
+	}
+
+	@media @screen-xxs {
+		div.frame {
+			padding: 2.5rem 0.5rem 4rem 0.5rem;
 		}
 	}
 </style>

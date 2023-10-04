@@ -69,26 +69,6 @@
 	#header {
 		display: flex;
 		flex: 1;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-between;
-
-		& div {
-			order: 1;
-
-			height: 52px;
-		}
-
-		& div.comms {
-			order: 3;
-
-			margin-left: 3rem;
-			width: 5rem;
-		}
-
-		& div.navigation {
-			margin-left: auto;
-		}
 	}
 
 	main {
@@ -112,27 +92,9 @@
 	}
 
 	@media @screen-xs, @screen-s {
-		#header div {
-			height: 44px;
-		}
 	}
 
 	@media @screen-xxs, @screen-xs {
-		#header div.comms {
-			order: 1;
-		}
-
-		#header div.break {
-			flex-basis: 100%;
-			height: 0;
-
-			margin-top: 1.5rem;
-		}
-
-		#header div.navigation {
-			margin-right: auto;
-		}
-
 		#footer {
 			flex-direction: column;
 
@@ -145,19 +107,5 @@
 	}
 
 	@media @screen-xxs {
-		#header {
-			flex-direction: column;
-			align-items: center;
-		}
-
-		#header div {
-			height: 2rem;
-		}
-
-		#header div.comms {
-			margin: 0;
-			margin-top: 1.5rem;
-			width: 120px;
-		}
 	}
 </style>
