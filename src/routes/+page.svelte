@@ -241,7 +241,7 @@
 			justify-content: flex-end;
 
 			max-width: inherit;
-			padding: 18rem 2rem 3rem;
+			padding: 9rem 2rem 3rem;
 
 			h1 {
 				font-size: 2.5rem;
