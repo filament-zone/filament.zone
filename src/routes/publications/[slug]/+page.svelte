@@ -39,7 +39,7 @@
 	title="{publication.metadata.title} | Filament Research"
 	description={publication.metadata.teaser}
 	footerDividerColor={Color.White}>
-	<Segment slot="hero">
+	<Segment slot="hero" color={Color.Blue}>
 		<Container>
 			<h1>{publication.metadata.title}</h1>
 		</Container>

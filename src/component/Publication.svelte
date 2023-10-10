@@ -9,7 +9,7 @@
 	const date = moment(published).format('MMM Do, YYYY');
 </script>
 
-<a href="/research/{publication.slug}" {title}>
+<a href="/publications/{publication.slug}" {title}>
 	<aside>
 		<p class="category">{category}</p>
 		<ul>

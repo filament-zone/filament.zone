@@ -4,8 +4,7 @@
 
 <nav>
 	<ul>
-		<li><Link href="/research" name="Research" /></li>
-		<li><Link href="/community" name="Community" /></li>
+		<li><Link href="/publications" name="Publications" /></li>
 	</ul>
 </nav>
 

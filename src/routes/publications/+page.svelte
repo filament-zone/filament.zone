@@ -12,13 +12,13 @@
 
 	export let data: PageData;
 
-	const { publications } = data as { publications: Publication[] };
+	const publications = data as Publication[];
 </script>
 
 <Page title="Filament Research" footerDividerColor={Color.White}>
-	<Segment slot="hero">
+	<Segment slot="hero" color={Color.Blue}>
 		<Container>
-			<h1>Research</h1>
+			<h1>Publications</h1>
 		</Container>
 	</Segment>
 

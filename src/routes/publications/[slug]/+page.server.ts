@@ -1,10 +1,10 @@
 import { error } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 
-import type { Publication } from '$lib/cms';
-import research from 'cms/publications.json';
+import type { Publications } from '$lib/cms';
+import pubs from 'cms/publications.json';
 
-const publications = research.publications as { [key: string]: Publication };
+const publications = pubs as Publications;
 
 export const load: PageServerLoad = async ({ params }) => {
 	const publication = publications[params.slug as string];

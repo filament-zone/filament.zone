@@ -1,6 +1,6 @@
 import { origin } from '$lib/info';
 
-const pages = ['research', 'community'];
+const pages = ['publications', 'community'];
 const headers = {
 	'Cache-Control': 'max-age=0, s-maxage=3600',
 	'Content-Type': 'application/xml',

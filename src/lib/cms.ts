@@ -2,12 +2,18 @@ export enum Category {
 	Paper = 'paper',
 }
 
+export enum State {
+	Draft = 'draft',
+	Published = 'published',
+}
+
 export type Metadata = {
 	category: Category;
 	title: string;
 	teaser: string;
 	published: string;
 	authors: string[];
+	state: State;
 };
 
 export type Publication = {
@@ -19,8 +25,8 @@ export type Publication = {
 
 export type Publications = { [k: string]: Publication };
 
-export const listPublications = (): Publication[] => {
-	return [];
+export const isPublished = (metadata: Metadata): boolean => {
+	return metadata.state === State.Published;
 };
 
 export const titleToSlug = (title: string): string => {

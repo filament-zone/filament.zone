@@ -7,6 +7,7 @@
 	import Container from 'component/Container.svelte';
 	import Divider from 'component/Divider.svelte';
 	import Logo from 'component/Logo.svelte';
+	import Navigation from './Navigation.svelte';
 	import Segment from 'component/Segment.svelte';
 
 	$: origin = $page.url.origin;
@@ -34,15 +35,19 @@
 
 <div id="page">
 	<header>
-		<Segment>
+		<Segment color={Color.Blue}>
 			<Container>
 				<div id="header">
-					<Logo />
+					<div class="logo">
+						<Logo />
+					</div>
 					<div class="comms">
 						<Comms />
 					</div>
 					<div class="break" />
-					<div class="navigation"></div>
+					<div class="navigation">
+						<Navigation />
+					</div>
 				</div>
 			</Container>
 		</Segment>
@@ -59,7 +64,9 @@
 			<Divider color={footerDividerColor} />
 			<Container>
 				<div id="footer">
-					<Logo inverted />
+					<div class="logo">
+						<Logo inverted />
+					</div>
 					<div class="comms">
 						<Comms alternative />
 					</div>
@@ -105,7 +112,6 @@
 			order: 3;
 
 			margin-left: 3rem;
-			width: 5rem;
 		}
 
 		& div.navigation {
@@ -120,6 +126,10 @@
 		justify-content: space-between;
 
 		padding: 40px 0px 50px 0px;
+	}
+
+	div.logo {
+		max-width: 13rem;
 	}
 
 	@media @screen-xs, @screen-s {
