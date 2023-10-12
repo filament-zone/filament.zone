@@ -15,7 +15,7 @@
 	const { publications } = data as { publications: Publication[] };
 </script>
 
-<Page title="Filament Research" footerDividerColor={Color.White}>
+<Page title="Filament Publications" footerDividerColor={Color.White}>
 	<Segment slot="hero" color={Color.Blue}>
 		<Container>
 			<h1>Publications</h1>
@@ -37,11 +37,11 @@
 
 <style lang="less">
 	h1 {
-		padding-bottom: 50px;
+		padding-bottom: 3.125rem;
 	}
 
 	div.publication {
-		max-width: 1024px;
+		max-width: 64rem;
 
 		margin-bottom: 4rem;
 	}

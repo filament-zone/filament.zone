@@ -105,7 +105,7 @@
 		& div {
 			order: 1;
 
-			height: 52px;
+			height: 3.25rem;
 		}
 
 		& div.comms {
@@ -126,10 +126,10 @@
 		justify-content: space-between;
 
 		padding: 40px 0px 50px 0px;
-	}
 
-	div.logo {
-		max-width: 13rem;
+		& div {
+			height: 3.25rem;
+		}
 	}
 
 	@media @screen-xs, @screen-s {
@@ -147,11 +147,11 @@
 			flex-basis: 100%;
 			height: 0;
 
-			margin-top: 1.5rem;
+			margin-top: 2rem;
 		}
 
 		#header div.navigation {
-			margin-right: auto;
+			margin: 0 auto;
 		}
 
 		#footer {
@@ -161,24 +161,14 @@
 		}
 
 		#footer div.comms {
+			margin-left: 0;
 			margin-top: 2rem;
 		}
 	}
 
 	@media @screen-xxs {
-		#header {
-			flex-direction: column;
-			align-items: center;
-		}
-
-		#header div {
-			height: 2rem;
-		}
-
-		#header div.comms {
-			margin: 0;
+		#header div.break {
 			margin-top: 1.5rem;
-			width: 120px;
 		}
 	}
 </style>
