@@ -10,20 +10,22 @@
 </script>
 
 <a href="/publications/{publication.slug}" {title}>
-	<aside>
-		<p class="category">{category}</p>
-		<ul>
-			{#each authors as author}
-				<li>{author}</li>
-			{/each}
-		</ul>
-		<small>{date}</small>
-	</aside>
 	<article>
 		<h2>{title}</h2>
 		<hr />
 		<p>{teaser}</p>
 	</article>
+	<aside>
+		<p class="category">{category}</p>
+		<div class="meta">
+			<ul>
+				{#each authors as author}
+					<li>{author}</li>
+				{/each}
+			</ul>
+			<small>{date}</small>
+		</div>
+	</aside>
 </a>
 
 <style lang="less">
@@ -51,14 +53,24 @@
 		}
 	}
 
+	article {
+		order: 2;
+	}
+
 	aside {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		order: 1;
 
 		width: 10rem;
 
 		margin-right: 4rem;
+
+		& div.meta {
+			display: flex;
+			flex-direction: column;
+		}
 
 		& p {
 			font-family: 'GT-Eesti-Display-Bold';
@@ -70,8 +82,6 @@
 		}
 
 		& ul {
-			margin-top: auto;
-
 			font-family: 'GT-Eesti-Display-Medium';
 			font-size: 1.4rem;
 			font-style: normal;
@@ -118,14 +128,23 @@
 		}
 	}
 
-	@media @screen-xs, @screen-xxs {
+	@media @screen-xxs, @screen-xs {
 		a {
 			flex-direction: column;
 		}
 
 		aside {
+			order: 3;
+			flex-direction: row;
+			align-items: flex-end;
+			width: 100%;
+
 			margin: 0;
-			margin-bottom: 3rem;
+			margin-top: 3rem;
+
+			& div.meta {
+				align-items: flex-end;
+			}
 
 			& ul li {
 				display: inline;
@@ -138,6 +157,14 @@
 
 		h2 {
 			font-size: 2rem;
+		}
+	}
+
+	@media @screen-xxs {
+		aside {
+			& ul li {
+				display: block;
+			}
 		}
 	}
 </style>

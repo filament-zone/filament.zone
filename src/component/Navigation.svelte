@@ -1,10 +1,12 @@
 <script lang="ts">
 	import Link from 'component/Navigation/Link.svelte';
+
+	export let inverted = false;
 </script>
 
 <nav>
 	<ul>
-		<li><Link href="/publications" name="Publications" /></li>
+		<li><Link href="/publications" name="Publications" {inverted} /></li>
 	</ul>
 </nav>
 
@@ -23,12 +25,12 @@
 	}
 
 	li:not(:last-of-type) {
-		margin-right: 35px;
+		margin-right: 2.125rem;
 	}
 
 	@media @screen-xxs, @screen-xs, @screen-s {
 		li:not(:last-of-type) {
-			margin-right: 24px;
+			margin-right: 2rem;
 		}
 	}
 </style>

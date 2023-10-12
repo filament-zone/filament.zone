@@ -14,6 +14,7 @@ export type Metadata = {
 	published: string;
 	authors: string[];
 	state: State;
+	cover?: string;
 };
 
 export type Publication = {

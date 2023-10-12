@@ -6,6 +6,7 @@
 	import Comms from 'component/Comms.svelte';
 	import Container from 'component/Container.svelte';
 	import Logo from 'component/Logo.svelte';
+	import Navigation from './Navigation.svelte';
 	import Segment from 'component/Segment.svelte';
 
 	$: origin = $page.url.origin;
@@ -48,6 +49,10 @@
 					<div class="comms">
 						<Comms alternative />
 					</div>
+					<div class="break" />
+					<div class="navigation">
+						<Navigation inverted />
+					</div>
 				</div>
 			</Container>
 		</Segment>
@@ -81,17 +86,27 @@
 	#footer {
 		display: flex;
 		flex: 1;
+		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-between;
 
 		padding: 2.5rem 0rem 3rem 0rem;
 
-		div.logo {
-			height: 3rem;
-		}
-	}
+		& div {
+			order: 1;
 
-	@media @screen-xs, @screen-s {
+			height: 3.25rem;
+		}
+
+		& div.comms {
+			order: 3;
+
+			margin-left: 3rem;
+		}
+
+		& div.navigation {
+			margin-left: auto;
+		}
 	}
 
 	@media @screen-xxs, @screen-xs {
@@ -99,13 +114,27 @@
 			flex-direction: column;
 
 			padding: 0;
+
+			& div.comms {
+				order: 1;
+
+				margin-left: 0;
+			}
+
+			& div.break {
+				flex-basis: 100%;
+				height: 0;
+
+				margin-top: 2rem;
+			}
+
+			& div.navigation {
+				margin-left: 0;
+			}
 		}
 
 		#footer div.comms {
 			margin-top: 2rem;
 		}
-	}
-
-	@media @screen-xxs {
 	}
 </style>

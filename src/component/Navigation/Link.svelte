@@ -3,9 +3,10 @@
 
 	export let href: string;
 	export let name: string;
+	export let inverted = false;
 </script>
 
-<a {href} class:current={$page.url.pathname.includes(href)}>{name}</a>
+<a class:inverted {href} class:current={$page.url.pathname.includes(href)}>{name}</a>
 
 <style lang="less">
 	@import 'src/styles/colors.less';
@@ -31,9 +32,11 @@
 		}
 	}
 
-	@media @screen-xxs {
-		a {
-			font-size: 0.875rem;
+	a.inverted {
+		color: @color-pink;
+
+		&:hover {
+			color: @color-primary-white;
 		}
 	}
 </style>

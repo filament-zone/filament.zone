@@ -36,18 +36,20 @@
 </script>
 
 <Page
-	title="{publication.metadata.title} | Filament Research"
+	title="{publication.metadata.title} | Filament Publications"
 	description={publication.metadata.teaser}
 	footerDividerColor={Color.White}>
 	<Segment slot="hero" color={Color.Blue}>
-		<Container>
-			<h1>{publication.metadata.title}</h1>
-		</Container>
+		<div class="background" style="background-image: url({publication.metadata.cover})">
+			<Divider />
+			<Container>
+				<h1>{publication.metadata.title}</h1>
+			</Container>
+			<Divider color={Color.White} inverted />
+		</div>
 	</Segment>
 
 	<Segment color={Color.White} slot="content">
-		<Divider />
-
 		<Container direction={Direction.Row}>
 			<div class="publication">
 				<div id="toc">
@@ -64,10 +66,21 @@
 <style lang="less">
 	@import 'src/styles/responsive.less';
 
+	div.background {
+		height: 100%;
+		width: 100%;
+
+		background-attachment: scroll;
+		background-image: url('/img/hero-landscape.png');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
 	h1 {
 		max-width: 56rem;
 
-		padding-bottom: 3.125rem;
+		padding: 4rem 0;
 	}
 
 	div.publication {
