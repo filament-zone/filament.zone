@@ -148,10 +148,6 @@ Future works will formalize the specification of Pulzaar, research robust incent
 
 If those sound interesting and you want to collaborate, please reach out to [connect@pulzaar.zone](mailto:connect@pulzaar.zone).
 
----
-
-## refs
-
 [^1]: [https://hackmd.io/@flashbots/mev-in-eth2#validator-reward-economics](https://hackmd.io/@flashbots/mev-in-eth2#validator-reward-economics)
 [^2]: Daian, Philip, et al. "Flash boys 2.0: Frontrunning, transaction reordering, and consensus instability in decentralized exchanges." *arXiv preprint arXiv:1904.05234* (2019).
 [^3]: [https://ethresear.ch/t/flashbots-frontrunning-the-mev-crisis/8251](https://ethresear.ch/t/flashbots-frontrunning-the-mev-crisis/8251)

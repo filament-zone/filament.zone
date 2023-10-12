@@ -65,9 +65,9 @@
 	@import 'src/styles/responsive.less';
 
 	h1 {
-		max-width: 910px;
+		max-width: 56rem;
 
-		padding-bottom: 50px;
+		padding-bottom: 3.125rem;
 	}
 
 	div.publication {
@@ -78,17 +78,19 @@
 	#toc {
 		flex-shrink: 0;
 
-		margin-right: 80px;
-		padding: 24px 0px;
+		max-width: 25rem;
+
+		margin-right: 5rem;
+		padding: 1.5rem 0rem;
 	}
 
 	:global(#toc ul) {
 		position: sticky;
-		top: 24px;
+		top: 1.5rem;
 	}
 
 	article {
-		max-width: 910px;
+		max-width: 56rem;
 	}
 
 	@media @screen-s, @screen-xs, @screen-xxs {

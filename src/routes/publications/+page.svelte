@@ -12,7 +12,7 @@
 
 	export let data: PageData;
 
-	const publications = data as Publication[];
+	const { publications } = data as { publications: Publication[] };
 </script>
 
 <Page title="Filament Research" footerDividerColor={Color.White}>
