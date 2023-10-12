@@ -5,6 +5,7 @@
 
 	import Comms from 'component/Comms.svelte';
 	import Container from 'component/Container.svelte';
+	import Divider from './Divider.svelte';
 	import Logo from 'component/Logo.svelte';
 	import Navigation from './Navigation.svelte';
 	import Segment from 'component/Segment.svelte';
@@ -40,7 +41,8 @@
 	</main>
 
 	<footer>
-		<Segment color={Color.BackgroundsDark}>
+		<Segment color={Color.Black}>
+			<Divider color={Color.White} />
 			<Container>
 				<div id="footer">
 					<div class="logo">

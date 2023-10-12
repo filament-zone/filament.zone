@@ -2,6 +2,7 @@
 	import { Color } from '$lib/ui';
 
 	import Button from 'component/Button.svelte';
+	import Divider from 'component/Divider.svelte';
 	import Frame from 'component/Frame.svelte';
 	import Container from 'component/Container.svelte';
 	import Logo from 'component/Logo.svelte';
@@ -76,6 +77,56 @@
 							<img src="/img/distributor.png" alt="A distributors store" />
 						</div>
 					</section>
+				</div>
+			</Container>
+			<Divider color={Color.Cyan} inverted />
+		</Segment>
+
+		<Segment color={Color.Cyan}>
+			<Container>
+				<div id="partners">
+					<h2>Partners</h2>
+					<ul>
+						<li>
+							<a href="https://www.keplr.app/" title="Keplr Wallet"
+								><img src="/img/partners-logo-keplr.png" alt="Keplr Wallet" /></a>
+						</li>
+						<li>
+							<a href="https://www.sommelier.finance/" title="Sommelier Finance"
+								><img src="/img/partners-logo-sommelier.png" alt="Sommelier Finance" /></a>
+						</li>
+						<li>
+							<a href="https://www.leapwallet.io/" title="Leap"
+								><img src="/img/partners-logo-leap.png" alt="Leap" /></a>
+						</li>
+						<li>
+							<a href="https://www.levana.finance/" title="Levana"
+								><img src="/img/partners-logo-levana.png" alt="Levana" /></a>
+						</li>
+						<li>
+							<a href="https://www.quasar.fi/" title="Quasar"
+								><img src="/img/partners-logo-quasar.png" alt="Quasar" /></a>
+						</li>
+					</ul>
+				</div>
+			</Container>
+		</Segment>
+
+		<Segment color={Color.White}>
+			<Divider color={Color.Cyan} />
+			<Container>
+				<div id="contributors">
+					<h2>Contributors</h2>
+					<ul>
+						<li>
+							<a href="https://meka.tech/" title="Mekatek"
+								><img src="/img/contributors-logo-mekatek.png" alt="Mekatek" /></a>
+						</li>
+						<li>
+							<a href="https://www.numia.xyz/" title="Numia"
+								><img src="/img/contributors-logo-numia.png" alt="Numia" /></a>
+						</li>
+					</ul>
 				</div>
 			</Container>
 		</Segment>
@@ -233,6 +284,84 @@
 			p {
 				color: @color-primary-white;
 			}
+		}
+	}
+
+	div#partners {
+		align-self: stretch;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 5.125rem;
+
+		width: 100%;
+
+		padding: 5rem 0 6rem 0;
+
+		h2 {
+			margin-bottom: 2rem;
+
+			color: @color-blue;
+			text-align: center;
+		}
+
+		& ul {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			gap: 7rem;
+		}
+
+		& ul li {
+			flex-shrink: 0;
+
+			height: 4rem;
+		}
+
+		& ul li a img {
+			height: 100%;
+		}
+	}
+
+	div#contributors {
+		align-self: stretch;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 5.125rem;
+
+		width: 100%;
+
+		padding: 5rem 0 6rem 0;
+
+		h2 {
+			margin-bottom: 2rem;
+
+			color: @color-blue;
+			text-align: center;
+		}
+
+		& ul {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			gap: 8.5rem;
+		}
+
+		& ul li {
+			flex-shrink: 0;
+
+			height: 4rem;
+		}
+
+		& ul li a img {
+			height: 100%;
 		}
 	}
 
