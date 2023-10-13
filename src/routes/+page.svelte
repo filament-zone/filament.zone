@@ -18,7 +18,7 @@
 					<div class="logo">
 						<Logo />
 					</div>
-					<h1>Pioneering Interchain Connectivity</h1>
+					<h1>Reach Crypto Users</h1>
 					<p>
 						Step into the future with Filament - designed for unparalleled decentralized growth and
 						connectivity. Envision a world of seamless experiences for protocols and users.
