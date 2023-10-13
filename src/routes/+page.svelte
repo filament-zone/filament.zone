@@ -23,7 +23,7 @@
 						Step into the future with Filament - designed for unparalleled decentralized growth and
 						connectivity. Envision a world of seamless experiences for protocols and users.
 					</p>
-					<Button href="" label="Learn More" title="" outline={Color.White} />
+					<Button href="/publications/a-new-chapter-reaching-crypto-users-with-filament" label="Learn More" title="" outline={Color.White} />
 				</div>
 			</Container>
 		</div>
