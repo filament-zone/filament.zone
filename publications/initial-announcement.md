@@ -2,7 +2,7 @@
 category: announcement
 title: 'A New Chapter: Reaching Crypto Users with Filament'
 teaser: Mekatek and Numia announce Filament — native support for crypto project growth.
-published: 2023-10-09
+published: 2023-10-13
 authors:
   - brapse
   - onr
