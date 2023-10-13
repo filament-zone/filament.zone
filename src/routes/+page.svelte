@@ -85,7 +85,7 @@
 		<Segment color={Color.Cyan}>
 			<Container>
 				<div id="partners">
-					<h2>Partners</h2>
+					<h2>Collaborators</h2>
 					<ul>
 						<li>
 							<a href="https://www.keplr.app/" title="Keplr Wallet"
