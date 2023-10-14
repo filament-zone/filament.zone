@@ -21,9 +21,13 @@
 					<h1>Reach Crypto Users</h1>
 					<p>
 						Step into the future with Filament - designed for unparalleled decentralized growth and
-						connectivity. Envision a world of seamless experiences for protocols and users.
+						connectivity for protocols and users.
 					</p>
-					<Button href="/publications/a-new-chapter-reaching-crypto-users-with-filament" label="Learn More" title="" outline={Color.White} />
+					<Button
+						href="/publications/a-new-chapter-reaching-crypto-users-with-filament"
+						label="Learn More"
+						title=""
+						outline={Color.White} />
 				</div>
 			</Container>
 		</div>
@@ -61,7 +65,7 @@
 								<h2>For Distributors</h2>
 								<p>
 									With Filament, become a pivotal connector in the expansive Internet of
-									Blockchains. Extend your experiences to users and open new avenues of growth &
+									Blockchains. Improve your users experience and open new avenues of growth &
 									revenue.
 								</p>
 								<div class="cta">
@@ -85,7 +89,7 @@
 		<Segment color={Color.Cyan}>
 			<Container>
 				<div id="partners">
-					<h2>Collaborators</h2>
+					<h2>Partners</h2>
 					<ul>
 						<li>
 							<a href="https://www.keplr.app/" title="Keplr Wallet"
