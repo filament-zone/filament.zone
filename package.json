@@ -17,7 +17,7 @@
 		"prepare": "husky install"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "^2.1.0",
+		"@sveltejs/adapter-auto": "^2.1.1",
 		"@sveltejs/adapter-cloudflare": "^2.3.3",
 		"@sveltejs/kit": "^1.27.3",
 		"@types/markdown-it": "^13.0.5",
