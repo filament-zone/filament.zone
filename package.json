@@ -19,7 +19,7 @@
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.1.1",
 		"@sveltejs/adapter-cloudflare": "^2.3.4",
-		"@sveltejs/kit": "^1.27.6",
+		"@sveltejs/kit": "^2.0.6",
 		"@types/markdown-it": "^13.0.7",
 		"@types/markdown-it-footnote": "^3.0.3",
 		"@typescript-eslint/eslint-plugin": "^6.17.0",
