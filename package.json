@@ -49,7 +49,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"markdown-it": "^13.0.2",
+		"markdown-it": "^14.0.0",
 		"markdown-it-anchor": "^8.6.7",
 		"markdown-it-footnote": "^4.0.0",
 		"moment": "^2.30.1"
