@@ -38,8 +38,8 @@
 
 	/* Set core body defaults */
 	body {
-		height: 100vh;
-		width: 100vw;
+		height: 100%;
+		width: 100%;
 
 		scroll-behavior: smooth;
 		text-rendering: geometricPrecision;
