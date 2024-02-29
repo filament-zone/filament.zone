@@ -219,35 +219,6 @@
 		}
 	}
 
-	div.value {
-		display: flex;
-		flex: 1;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-
-		padding: 3.75rem 0;
-
-		h2 {
-			margin-bottom: 0.6rem;
-
-			color: @color-blue;
-			text-align: center;
-		}
-
-		p {
-			max-width: 46.5rem;
-
-			color: @color-primary-black;
-			font-family: 'Satoshi-Medium';
-			font-size: 1.375rem;
-			font-style: normal;
-			font-weight: 500;
-			line-height: 180%;
-			text-align: center;
-		}
-	}
-
 	div.actors {
 		display: flex;
 		flex-direction: column;
@@ -407,10 +378,6 @@
 			div.cta {
 				margin: 0 auto;
 			}
-		}
-
-		div.community {
-			flex-direction: column;
 		}
 	}
 

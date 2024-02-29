@@ -73,7 +73,7 @@
 		width: 100%;
 	}
 
-	#header {
+	header {
 		display: flex;
 		flex: 1;
 	}

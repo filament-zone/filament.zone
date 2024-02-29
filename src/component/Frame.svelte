@@ -9,7 +9,7 @@
 
 <div class="frame {color}">
 	{#if img}
-		<img src={img} />
+		<img src={img} alt="frame background" />
 	{/if}
 
 	<div class="content">
