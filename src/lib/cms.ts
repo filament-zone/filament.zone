@@ -3,6 +3,7 @@ export enum Category {
 }
 
 export enum State {
+	Archived = 'archived',
 	Draft = 'draft',
 	Published = 'published',
 }
@@ -14,7 +15,6 @@ export type Metadata = {
 	published: string;
 	authors: string[];
 	state: State;
-	cover?: string;
 };
 
 export type Publication = {

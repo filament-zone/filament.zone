@@ -4,12 +4,8 @@ title: 'A New Chapter: Reaching Crypto Users with Filament'
 teaser: Mekatek and Numia announce Filament — native support for crypto project growth.
 published: 2023-10-13
 authors:
-  - brapse
-  - onr
   - Rafael Aviles
-  - xla
 state: published
-cover: /publications/initial-announcement.png
 ---
 
 Today marks an important step for [Mekatek](https://meka.tech/) and [Numia](https://www.numia.xyz/). We're introducing [Filament](https://twitter.com/filamentzone), a project birthed from our experience running growth campaigns for protocols. Filament is our attempt to bridge gaps, fostering protocol growth, engagement, and retention across the Interchain and beyond. By leveraging wallet activity for dynamic audience segmentation, we craft end-to-end campaigns that reach effectively and ensure sustainable growth.
@@ -46,5 +42,4 @@ With the launch of Filament, we aim to further bridge the gap between crypto pro
 We warmly invite you to delve deeper into Filament, understanding its conceptual architecture and envisaged integration techniques. With Filament, we are at the beginning of a journey, one that invites exploration and enlightenment. If our aspirations resonate with you and pique your interest, please do get in touch.
 
 Follow us on Twitter: [https://x.com/filamentzone](https://x.com/filamentzone)
-
 Contact us at: [connect@filament.zone](mailto:connect@filament.zone)

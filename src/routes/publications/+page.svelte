@@ -2,47 +2,48 @@
 	import type { PageData } from './$types';
 
 	import type { Publication } from '$lib/cms';
-	import { Alignment, Color, Direction } from '$lib/ui';
 
 	import Container from 'component/Container.svelte';
-	import Divider from 'component/Divider.svelte';
 	import Page from 'component/Page.svelte';
 	import Pub from 'component/Publication.svelte';
-	import Segment from 'component/Segment.svelte';
 
 	export let data: PageData;
-
 	const { publications } = data as { publications: Publication[] };
 </script>
 
-<Page title="Filament Publications" footerDividerColor={Color.White}>
-	<Segment slot="hero" color={Color.Blue}>
-		<Container>
-			<h1>Publications</h1>
-		</Container>
-	</Segment>
+<Page>
+	<Container slot="hero">
+		<h1>Publications</h1>
+	</Container>
 
-	<Segment color={Color.White} slot="content">
-		<Divider />
-
-		<Container alignment={Alignment.Center} direction={Direction.Column}>
+	<Container slot="content">
+		<div class="publications">
 			{#each publications as publication}
 				<div class="publication">
 					<Pub {publication} />
 				</div>
 			{/each}
-		</Container>
-	</Segment>
+		</div>
+	</Container>
 </Page>
 
 <style lang="less">
 	h1 {
-		padding-bottom: 3.125rem;
+		width: 80rem;
+
+		margin: 0 auto;
 	}
 
-	div.publication {
-		max-width: 64rem;
+	.publications {
+		display: flex;
+		align-items: stretch;
+		flex-direction: column;
+		justify-content: flex-start;
+		gap: 4rem;
 
-		margin-bottom: 4rem;
+		max-width: 80rem;
+		width: 100%;
+
+		margin: 0 auto;
 	}
 </style>

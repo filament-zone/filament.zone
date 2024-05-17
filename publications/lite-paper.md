@@ -6,10 +6,10 @@ teaser:
   their execution preferences in a more nuanced way than is currently possible.
 published: 2023-01-09
 authors:
-  - brapse
   - patternmachine
+  - brapse
   - xla
-state: draft
+state: archived
 ---
 
 ## Intro

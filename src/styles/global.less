@@ -1,0 +1,129 @@
+@import 'src/styles/colors.less';
+@import 'src/styles/typography.less';
+
+:root {
+	--dark-color: @color-dark-net;
+	--highlight-color: @color-purple-cow;
+
+	--cta-dark-background: @color-dark-net;
+	--cta-dark-foreground: @color-litepaper;
+
+	--stat-foreground: @color-dark-net;
+}
+
+:root[data-theme='light'] {
+	--foreground-color: @color-dark-net;
+	--background-color: @color-litepaper;
+
+	--link-color: @color-rugged;
+
+	--card-background: @color-background-light;
+	--card-border: @color-border-light;
+	--card-shadow: rgba(@color-dark-net, 0.25);
+
+	--cta-background: @color-dark-net;
+	--cta-foreground: @color-litepaper;
+
+	--partner-gradient: linear-gradient(
+		to bottom,
+		@color-litepaper,
+		rgba(@color-litepaper, 0) 5%,
+		rgba(@color-litepaper, 0) 95%,
+		@color-litepaper
+	);
+	--partner-shadow: linear-gradient(to top, rgba(@color-dark-net, 0.15), rgba(@color-dark-net, 0));
+}
+
+:root[data-theme='dark'] {
+	--foreground-color: @color-litepaper;
+	--background-color: @color-dark-net;
+
+	--link-color: @color-blue-chip;
+
+	--card-background: @color-background-dark;
+	--card-border: @color-border-dark;
+	--card-shadow: rgba(@color-litepaper, 0.4);
+
+	--cta-background: @color-filamint;
+	--cta-foreground: @color-dark-net;
+
+	--partner-gradient: linear-gradient(
+		to bottom,
+		@color-dark-net,
+		rgba(@color-dark-net, 0) 5%,
+		rgba(@color-dark-net, 0) 95%,
+		@color-dark-net
+	);
+	--partner-shadow: linear-gradient(
+		to top,
+		rgba(@color-litepaper, 0.15),
+		rgba(@color-litepaper, 0)
+	);
+}
+
+html {
+	background-color: var(--background-color);
+	color: var(--foreground-color);
+}
+
+a {
+	color: var(--link-color);
+	text-decoration: none;
+
+	transition: all 0.12s ease-in-out;
+
+	&:hover {
+		color: var(--highlight-color);
+	}
+}
+
+h1 {
+	.h1();
+}
+
+h2 {
+	.h2();
+}
+
+article h2 {
+	.h-publications();
+}
+
+article h3 {
+	.h2-publications();
+}
+
+article p,
+article ol,
+article ul {
+	.body-publications();
+
+	margin: 0;
+	padding: 0;
+}
+
+article ol,
+article ul {
+	padding-left: 1rem;
+}
+
+article hr {
+	color: var(--foreground-color);
+	background: var(--foreground-color);
+
+	height: 0.0625rem;
+	width: 100%;
+
+	border: 0;
+
+	font-size: 0;
+}
+
+article code {
+	.code();
+
+	color: var(--background-color);
+	background-color: var(--foreground-color);
+
+	padding: 0.125rem 0.25rem;
+}

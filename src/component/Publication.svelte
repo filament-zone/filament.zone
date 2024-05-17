@@ -1,49 +1,47 @@
 <script lang="ts">
-	import moment from 'moment';
-
 	import type { Publication } from '$lib/cms';
+	import PublicationMeta from 'component/PublicationMeta.svelte';
 
 	export let publication: Publication;
 
 	const { authors, category, published, teaser, title } = publication.metadata;
-	const date = moment(published).format('MMM Do, YYYY');
+	authors.splice(1, 1);
 </script>
 
-<a href="/publications/{publication.slug}" {title}>
-	<article>
-		<h2>{title}</h2>
-		<hr />
-		<p>{teaser}</p>
-	</article>
-	<aside>
-		<p class="category">{category}</p>
-		<div class="meta">
-			<ul>
-				{#each authors as author}
-					<li>{author}</li>
-				{/each}
-			</ul>
-			<small>{date}</small>
-		</div>
-	</aside>
+<a class="publication-card" href="/publications/{publication.slug}" {title}>
+	<div class="inner">
+		<article>
+			<h2>{title}</h2>
+			<p>{teaser}</p>
+		</article>
+		<aside>
+			<p class="category">{category}</p>
+			<PublicationMeta {authors} {published} />
+		</aside>
+	</div>
 </a>
 
 <style lang="less">
 	@import 'src/styles/colors.less';
 	@import 'src/styles/responsive.less';
+	@import 'src/styles/typography.less';
 
 	a {
 		display: flex;
-		flex-direction: row;
+		align-items: stretch;
+		flex-direction: column;
+		flex-shrink: 0;
+		justify-content: center;
+		gap: 1rem;
 
-		width: 100%;
+		min-height: 18.25rem;
 
-		padding: 2.2rem;
+		padding: 1rem 3rem;
 
-		background: @color-blue;
-		border: 3px solid @color-primary-cyan;
+		background: var(--card-background);
+		border: 0.025rem solid var(--card-border);
 
-		color: @color-primary-white;
+		color: var(--foreground-color);
 		text-decoration: none;
 
 		transition: all 0.12s ease-in-out;
@@ -51,14 +49,37 @@
 		& * {
 			transition: all 0.12s ease-in-out;
 		}
+
+		&:hover {
+			box-shadow: 0rem 0rem 1.375rem 0rem var(--card-shadow);
+		}
 	}
 
-	article {
+	div.inner {
+		display: flex;
+		align-items: flex-start;
+		gap: 3.125rem;
+
+		min-height: 12rem;
+	}
+
+	a.publication-card article {
+		align-items: flex-start;
+		display: flex;
+		flex: 1 0 0;
+		flex-direction: column;
+		gap: 1.25rem;
 		order: 2;
+
+		& h2 {
+			.h2();
+		}
 	}
 
 	aside {
 		display: flex;
+		align-items: flex-start;
+		align-self: stretch;
 		flex-direction: column;
 		justify-content: space-between;
 		order: 1;
@@ -67,70 +88,30 @@
 
 		margin-right: 4rem;
 
-		& div.meta {
-			display: flex;
-			flex-direction: column;
-		}
+		& .category {
+			.h3();
 
-		& p {
-			font-family: 'GT-Eesti-Display-Bold';
-			font-size: 1.4rem;
-			font-style: normal;
-			font-weight: 700;
-			line-height: 150%;
 			text-transform: capitalize;
 		}
-
-		& ul {
-			font-family: 'GT-Eesti-Display-Medium';
-			font-size: 1.4rem;
-			font-style: normal;
-			font-weight: 400;
-			line-height: 150%;
-		}
-
-		& small {
-			font-family: 'IBM-Plex-Mono-Regular';
-			font-size: 1.125rem;
-			font-style: normal;
-			font-weight: 400;
-			line-height: 150%;
-		}
 	}
 
-	h2 {
-		font-family: 'GT-Eesti-Display-Bold';
-		font-size: 2.5rem;
-		font-style: medium;
-		font-weight: 700;
-		line-height: 150%;
-	}
-
-	hr {
-		margin: 1.25rem 0;
-
-		border: 0.125rem solid @color-primary-cyan;
-	}
-
-	p {
-		font-family: 'GT-Eesti-Text-Medium';
-		font-size: 1.125rem;
-		font-style: normal;
-		font-weight: 375;
-		line-height: 180%;
-	}
-
-	a:hover {
-		background-color: #1b61c2;
-
-		& h2 {
-			color: @color-pink;
+	@media @screen-xxs, @screen-xs, @screen-s {
+		div.inner {
+			gap: 1rem;
 		}
 	}
 
 	@media @screen-xxs, @screen-xs {
 		a {
+			height: auto;
+
+			padding: 1.5rem 1.25rem;
+		}
+
+		div.inner {
 			flex-direction: column;
+
+			height: auto;
 		}
 
 		aside {
@@ -140,19 +121,6 @@
 			width: 100%;
 
 			margin: 0;
-			margin-top: 3rem;
-
-			& div.meta {
-				align-items: flex-end;
-			}
-
-			& ul li {
-				display: inline;
-
-				&:not(:last-of-type) {
-					margin-right: 1rem;
-				}
-			}
 		}
 
 		h2 {
@@ -162,9 +130,8 @@
 
 	@media @screen-xxs {
 		aside {
-			& ul li {
-				display: block;
-			}
+			align-items: flex-start;
+			flex-direction: column-reverse;
 		}
 	}
 </style>

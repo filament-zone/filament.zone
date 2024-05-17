@@ -1,29 +1,20 @@
 <script lang="ts">
-	import { Alignment, Color, Direction } from '$lib/ui';
-
 	import Container from 'component/Container.svelte';
-	import Divider from 'component/Divider.svelte';
 	import Page from 'component/Page.svelte';
-	import Segment from 'component/Segment.svelte';
 </script>
 
-<Page footerDividerColor={Color.White}>
+<Page>
 	<div slot="hero">
-		<Segment>
-			<h1>404 - Page not found</h1>
-			<Divider color={Color.White} inverted />
-		</Segment>
+		<h1>404 - Page not found</h1>
 	</div>
 
-	<Segment color={Color.White} slot="content">
-		<Container alignment={Alignment.Center} direction={Direction.Column}>
-			<p>
-				This is not where you wanted to go, because this is nowhere. But don’t worry, we can guide
-				you back onto the right path!
-			</p>
-			<a href="/" title="Filament">Back to Main Page</a>
-		</Container>
-	</Segment>
+	<Container>
+		<p>
+			This is not where you wanted to go, because this is nowhere. But don’t worry, we can guide you
+			back onto the right path!
+		</p>
+		<a href="/" title="Filament">Back to Main Page</a>
+	</Container>
 </Page>
 
 <style lang="less">
@@ -39,7 +30,6 @@
 	p {
 		max-width: 38rem;
 
-		color: @color-primary-black;
 		font-family: 'GT-Eesti-Display-Regular';
 		font-style: normal;
 		font-weight: 400;

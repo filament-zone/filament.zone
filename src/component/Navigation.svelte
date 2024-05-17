@@ -1,12 +1,12 @@
 <script lang="ts">
 	import Link from 'component/Navigation/Link.svelte';
 
-	export let inverted = false;
+	export let dark: boolean = false;
 </script>
 
 <nav>
-	<ul>
-		<li><Link href="/publications" name="Publications" {inverted} /></li>
+	<ul class:dark>
+		<li><Link href="/publications" name="Publications" {dark} /></li>
 	</ul>
 </nav>
 
@@ -28,9 +28,20 @@
 		margin-right: 2.125rem;
 	}
 
-	@media @screen-xxs, @screen-xs, @screen-s {
-		li:not(:last-of-type) {
-			margin-right: 2rem;
+	@media @screen-xxs {
+		ul {
+			align-items: flex-start;
+			flex-direction: column;
+			gap: 0.5rem;
+
+			li::before {
+				content: '• ';
+				color: var(--foreground-color); /* or whatever color you prefer */
+			}
+		}
+
+		ul.dark li::before {
+			color: var(--background-color);
 		}
 	}
 </style>

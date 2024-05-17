@@ -15,6 +15,11 @@ export const load: PageServerLoad = async ({ params }) => {
 	}
 
 	return {
+		meta: {
+			title: `${publication.metadata.title} | Filament Publications`,
+			description: publication.metadata.teaser,
+			category: publication.metadata.category,
+		},
 		publication,
 	};
 };

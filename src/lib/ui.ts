@@ -1,19 +1,18 @@
-export enum Alignment {
-	Start = 'start',
-	Center = 'center',
-}
+import { readable } from 'svelte/store';
 
-export enum Color {
-	Black = 'black',
-	Blue = 'blue',
-	Cyan = 'cyan',
-	Pink = 'pink',
-	White = 'white',
+export const prefersDarkTheme = readable(false, (set) => {
+	let stop = () => {};
 
-	BackgroundsDark = 'backgrounds-dark',
-}
+	if (typeof window != 'undefined') {
+		const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
-export enum Direction {
-	Column = 'column',
-	Row = 'row',
-}
+		const setMatches = () => set(mediaQuery.matches);
+
+		setMatches();
+
+		mediaQuery.addEventListener('change', setMatches);
+		stop = () => mediaQuery.removeEventListener('change', setMatches);
+	}
+
+	return stop;
+});

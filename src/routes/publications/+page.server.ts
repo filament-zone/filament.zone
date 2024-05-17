@@ -6,6 +6,14 @@ const publications = pubs as Publications;
 
 export const load = async () => {
 	return {
-		publications: Object.values(publications).filter((pub) => isPublished(pub.metadata)),
+		meta: {
+			title: 'Filament Publications',
+		},
+		publications: Object.values(publications)
+			.filter((pub) => isPublished(pub.metadata))
+			.sort(
+				(a, b) =>
+					new Date(b.metadata.published).getTime() - new Date(a.metadata.published).getTime(),
+			),
 	};
 };

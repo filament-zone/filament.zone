@@ -1,11 +1,4 @@
-<script lang="ts">
-	import { Alignment, Direction } from '$lib/ui';
-
-	export let alignment: Alignment = Alignment.Start;
-	export let direction: Direction = Direction.Row;
-</script>
-
-<div style="--alignment: {alignment}; --direction: {direction}">
+<div>
 	<slot />
 </div>
 
@@ -14,25 +7,24 @@
 
 	div {
 		display: flex;
-		flex-direction: var(--direction);
-		align-items: var(--alignment);
 
-		max-width: 1620px;
+		max-width: 120rem;
 		width: 100%;
 
 		margin: 0 auto;
+
 		padding: 2.5rem 5rem 1.875rem 5rem;
 	}
 
-	@media @screen-xs, @screen-s, @screen-m {
+	@media @screen-s, @screen-m, @screen-l, @screen-xl {
 		div {
 			padding: 2.5rem 2.5rem 1.875rem 2.5rem;
 		}
 	}
 
-	@media @screen-xxs {
+	@media @screen-xxs, @screen-xs {
 		div {
-			padding: 0.5rem;
+			padding: 2.5rem 1.25rem 1.375rem 1.25rem;
 		}
 	}
 </style>
