@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Logo from 'component/Logo.svelte';
 	import Navigation from 'component/Navigation.svelte';
+	import Cta from './Cta.svelte';
 
 	export let dark: boolean = false;
 </script>
@@ -14,7 +15,9 @@
 	<div class="navigation">
 		<Navigation {dark} />
 	</div>
-	<div class="cta"></div>
+	<div class="cta">
+		<Cta href="/subscribe" title="Launch App" {dark} />
+	</div>
 </div>
 
 <style lang="less">
