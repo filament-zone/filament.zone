@@ -1,37 +1,27 @@
-<script lang="ts">
-	import KeplrLogo from './logos/KeplrLogo.svelte';
-	import LeapLogo from './logos/LeapLogo.svelte';
-	import LevanaLogo from './logos/LeavanaLogo.svelte';
-	import NobleLogo from './logos/NobleLogo.svelte';
-	import QuasarLogo from './logos/QuasarLogo.svelte';
-	import SommelierLogo from './logos/SommelierLogo.svelte';
-	import StrideLogo from './logos/StrideLogo.svelte';
-</script>
-
 <div class="partners">
 	<h1>Partners</h1>
 	<div class="list-container">
 		<div class="list">
 			<a href="https://www.keplr.app/" title="Keplr Wallet">
-				<KeplrLogo />
+				<img src="/img/partners-logo-keplr.png" alt="Keplr Wallet" />
 			</a>
 			<a href="https://www.leapwallet.io/" title="Leap Wallet">
-				<LeapLogo />
+				<img src="/img/partners-logo-leap.png" alt="Leap Wallet" />
 			</a>
 			<a href="https://www.stride.zone/" title="Stride">
-				<StrideLogo />
+				<img src="/img/partners-logo-stride.png" alt="Stride" />
 			</a>
 			<a href="https://nobleassets.xyz/" title="Noble">
-				<NobleLogo />
+				<img src="/img/partners-logo-noble.png" alt="Noble" />
 			</a>
 			<a href="https://quasar.fi/" title="Quasar Finance">
-				<QuasarLogo />
+				<img src="/img/partners-logo-quasar.png" alt="Quasar Finance" />
 			</a>
 			<a href="https://www.levana.finance/" title="Levana">
-				<LevanaLogo />
+				<img src="/img/partners-logo-levana.png" alt="Levana" />
 			</a>
 			<a href="https://www.sommelier.finance/" title="Sommelier">
-				<SommelierLogo />
+				<img src="/img/partners-logo-sommelier.png" alt="Sommelier" />
 			</a>
 		</div>
 	</div>
@@ -118,6 +108,10 @@
 
 		background-color: var(--background-color);
 		color: var(--foreground-color);
+
+		& img {
+			height: 8rem;
+		}
 
 		&::before {
 			content: '';
