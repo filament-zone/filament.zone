@@ -27,7 +27,7 @@
 		"@vitest/coverage-v8": "^1.6.0",
 		"eslint": "^8.57.0",
 		"eslint-config-prettier": "^9.1.0",
-		"eslint-plugin-svelte": "^2.39.3",
+		"eslint-plugin-svelte": "^2.40.0",
 		"husky": "^9.0.10",
 		"less": "^4.2.0",
 		"markdown-toc": "^1.2.0",
