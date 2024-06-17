@@ -11,7 +11,6 @@ state: published
 ## Introduction
 
 Crypto has revolutionized how communities organize by enabling anyone to issue a token. What once was the privilege of nation-states—launching a currency—has become as straightforward in the era of Web3 as deploying a website was in Web2. Standardized interfaces unlock DeFi infrastructure and new markets, making ownership a composable primitive. 
-
 However, this newfound power is not without its challenges. Tokens represent a double-edged sword. While they foster economic freedom, they also expose communities to financial incentives that may undermine their core values. 
 
 A token's value is inherently tied to the utility derived from a sustainable community. Distributing tokens, therefore, becomes a race to cultivate that community before the token's value goes to zero. There exists many methods of distributing tokens, but they all have problems.
@@ -24,9 +23,9 @@ However, it is hard to assess how much security is needed. Most protocols overpa
 
 Beyond securing the network, protocols have allocated a portion of their balance sheet to bootstrap initial demand. Airdrops [try to reward productive behavior](https://arxiv.org/pdf/2312.02752) while avoiding being [farmed](https://www.theblock.co/post/292502/layerzero-offers-sybil-farmers-chance-to-self-report-in-the-name-of-durability), but often without success. 
 
-Farming is a professional and most protocols don’t stand a chance. Isolating productive behavior with limited data and minimal tooling against a highly incentivized adversary is a recipe for disaster. Additionally, whatever criteria are set will be the [source of contention](https://unchainedcrypto.com/5-reasons-e-beggars-are-not-happy-with-eigenlayers-airdrop/). Too broad, and the [airdrop fails to concentrate on real users](https://6thman.ventures/writing/airdrops-an-analysis-of-over-2000000-events/); too fine, and rewards become concentrated, failing to decentralize the network. Arbitrary criteria behind an opaque process create rifts within the community. When trust is broken, it’s very difficult to repair, regardless of the value of the product.
+Farming is a professional activity and most protocols don’t stand a chance. Isolating productive behavior with limited data and minimal tooling against a highly incentivized adversary is a recipe for disaster. Additionally, whatever criteria are set will be the [source of contention](https://unchainedcrypto.com/5-reasons-e-beggars-are-not-happy-with-eigenlayers-airdrop/). Too broad, and the [airdrop fails to concentrate on real users](https://6thman.ventures/writing/airdrops-an-analysis-of-over-2000000-events/); too fine, and rewards become concentrated, failing to decentralize the network. Arbitrary criteria behind an opaque process create rifts within the community. When trust is broken, it’s very difficult to repair, regardless of the value of the product.
 
-Points systems have emerged to enhance airdrops by offering much-needed flexibility. Points represent a loose social contract centrally issued with ambiguous conversion criteria. They can be adjusted as market conditions evolve without prematurely diluting the issuer. However, points don't confer ownership of the protocol. Recipients have no say in network development or the conversion of points to tokens. T[hey often fail to align expectations](https://www.coindesk.com/tech/2024/05/09/eigenlayers-eigen-airdrop-might-signal-demise-of-once-popular-points/) between issuers and recipients. Without a mechanism to resolve disputes, points also struggle to align the community with how the token should be distributed.
+Points systems have emerged to enhance airdrops by offering much-needed flexibility. Points represent a loose social contract centrally issued with ambiguous conversion criteria. They can be adjusted as market conditions evolve without prematurely diluting the issuer. However, points don't confer ownership of the protocol. Recipients have no say in network development or the conversion of points to tokens. [They often fail to align expectations](https://www.coindesk.com/tech/2024/05/09/eigenlayers-eigen-airdrop-might-signal-demise-of-once-popular-points/) between issuers and recipients. Without a mechanism to resolve disputes, points also struggle to align the community with how the token should be distributed.
 
 Token distribution methods have become more social over time. With this shift, It’s become increasingly difficult to build consensus around what constitutes productive behavior in the systems we are building.  For decentralized protocols to last, we must marry this social reality with technical innovation. 
 
@@ -42,7 +41,7 @@ With the problem in mind, Filament aims to improve the toolchain for distributin
 
 **Repeatability**: Campaigns should be easily tweaked and replicated, fostering innovation through open iteration and collective learning. Filament should provide an open platform for replicating successful solutions and discarding ineffective methods.
 
-**Programmable Emissions**: Emissions should be dynamic, tied to different vesting criteria, and aligned with community objectives. Issuers will be able to deploy a new set of primitives adhering to common interfaces to compose with existing infrastrcuture.
+**Programmable Emissions**: Emissions should be dynamic, tied to different vesting criteria, and aligned with community objectives. Issuers will be able to deploy a new set of primitives adhering to common interfaces to compose with existing infrastructure.
 
 **Governance**: Incentives should align between issuers and recipients, integrating various actors to form a consensus. Participants should have a say in token distribution and a reliable dispute resolution process.
 
@@ -75,10 +74,9 @@ Establish the core protocol interfaces. The system will be restricted for both C
 The Mainnet will launch with stable interfaces that are ready to operate production interactions without significant trust assumptions. A native token will be issued and distributed to early contributors. Stakers will be subsidized with emissions.
 
 ### Combustion
-A Fully operational system with permissionless Campaigners, Stakers, and Participants. Outposts will be deployed on multiple networks, providing access to larger campaign audiences. Campaigners will be able to elect alternative staking positions, such as LP token holders, to align campaign outcomes with more diverse sets of actors. Commission will be paid to Stakers.
+A Fully operational system with permissionless Campaigners, Stakers, and Participants. Outposts will be deployed on multiple networks, providing access to larger campaign audiences. Campaigners will be able to elect alternative staking positions, such as LP token holders, to align campaign outcomes with more diverse sets of actors. The commission will be paid to Stakers.
 
 ## Conclusion
 
 Filament has a vision for Web3, where communities are durable and thrive. Tokens offer immense potential but come with significant challenges. Bootstrapping a community with financial incentives is difficult, and existing tools are not able to solve the problem. 
-
 Airdrops can work if we accept the reality that targeting productive behavior is a social process. Filament provides a new set of tools that make targeting easier and conflict resolution possible. Protocols can avoid community backlash and allocate their token supply with confidence by providing a process of ratifying social consensus. Ultimately, tokens should be distributed and communities should be decentralized to provide new forms of ownership. This is the purpose of Web3.
