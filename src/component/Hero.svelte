@@ -27,7 +27,7 @@
 		</div>
 
 		<div>
-			<h2>Click Rate</h2>
+			<h2>Conversion</h2>
 			<span>5%</span>
 		</div>
 
