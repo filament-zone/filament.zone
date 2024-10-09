@@ -1,4 +1,5 @@
 export enum Category {
+	article = 'article',
 	Paper = 'paper',
 }
 
