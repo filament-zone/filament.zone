@@ -66,7 +66,7 @@ These cases underscore the need for a more transparent, diverse approach to Sybi
 
 Filament introduces a new feedback loop that rewards a decentralized set of agents called delegates to identify Sybils based their subjective perspective while being rewarded for objective results. These delegates, whether human or AI, operate with public (though pseudo-anonymous) identities. Their actions are fully transparent and visible to the community, ensuring accountability. Here’s how it works in detail
 
-1. Define Objective Metric: Campaigners (people running airdrops),  define a clear, measurable economic metric that’s hard to game (e.g., total fees generated over 30 days).
+1. Define Objective Metric: Campaigners (people running airdrops), define a clear, measurable economic metric that’s hard to game (e.g., total fees generated over 30 days).
 2. Criteria: Delegates propose and vote on criteria for distributing tokens, weighted by their stake
 3. Distribution: Tokens are distributed to users based on the aggregated criteria from delegate votes.
 4. Measuring Impact: The system calculates each delegate's marginal contribution to the economic metric by comparing the outcome with and without their input.
@@ -120,7 +120,3 @@ There are several challenges that come with this approach. Here is we are lookin
 Filament's approach, enhanced by a reward mechanism, represents a significant evolution in token distribution strategies. By combining the nuanced judgments of diverse delegates with objective economic incentives, it creates a system that is both adaptable to new Sybil tactics and grounded in real-world impact.
 
 This balanced approach to subjectivity and objectivity offers a promising path forward for fairer, more effective token distributions. As the crypto ecosystem continues to evolve, systems like Filament that capture collective intelligence while maintaining economic alignment will be crucial for sustainable growth and genuine community engagement.
-
-References
-
-- [Eigenlayer Programatic Incentives FAQ](https://docs.eigenfoundation.org/programmatic-incentives/programmatic-incentives-faq)
