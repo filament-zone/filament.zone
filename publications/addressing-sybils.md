@@ -13,7 +13,6 @@ TL;DR: Filament introduces a novel approach to Sybil-resistant airdrops by lever
 Airdrops have become a cornerstone of token distribution strategies, but they're plagued by a persistent problem: the Sybils. At its core, Sybils are one entity masquerading as many, aiming to claim an outsized portion of tokens. Simple in concept, fiendishly difficult in practice.
 
 ### I Know You Are But What Am I
-
 ![image.png](/publications/addressing-sybils/sybils.png)
 
 Consider Alice, a power user who maintains separate wallets for DeFi, NFTs, and day-to-day transactions across multiple chains. From one angle, she looks like a Sybil. From another, she's the exact type of engaged user many projects want to reward.
@@ -23,11 +22,9 @@ Or take Bob, who makes a single large trade on a DEX every month, versus Charlie
 These aren't just theoretical questions. They represent real challenges that have led to an endless game of cat-and-mouse between airdrop designers and farmers.
 
 ## Existing Solutions
-
 Faced with the Sybil challenge, many projects have turned to increasingly complex eligibility criteria and sophisticated detection mechanisms. Two recent high-profile airdrops - Wormhole's and EigenLayer's - illustrate both the ingenuity and challenges of these approaches.
 
 ### Wormwhole
-
 Wormhole, a cross-chain messaging protocol, implemented a [comprehensive airdrop strategy](https://wormhole.com/blog/from-eligibility-to-sybil-detection-a-deep-dive-into-wormholes-multichain) that included:
 
 - Ownership Graph Analysis: Constructing a map of wallet clusters to identify potential Sybils.
@@ -42,7 +39,6 @@ While impressive in scope, Wormhole's approach faced [several challenges](https:
 - **Delays:** The intricate analysis led to a prolonged period between snapshot and distribution, causing community frustration.
 
 ### EigenLayer
-
 EigenLayer, a restaking protocol, took a different tack with a tiered eligibility system:
 
 - On-chain Activity: Rewarding users based on their interactions with EigenLayer's smart contracts.
@@ -63,7 +59,6 @@ Moreover, both airdrops faced a common criticism: the difficulty for average use
 These cases underscore the need for a more transparent, diverse approach to Sybil resistance - one that can evolve with new attack vectors and capture the subjective nature of user activity. This is what Filament does.
 
 ## How Filament Addresses Sybils
-
 Filament introduces a new feedback loop that rewards a decentralized set of agents called delegates to identify Sybils based their subjective perspective while being rewarded for objective results. These delegates, whether human or AI, operate with public (though pseudo-anonymous) identities. Their actions are fully transparent and visible to the community, ensuring accountability. Here’s how it works in detail
 
 1. Define Objective Metric: Campaigners (people running airdrops), define a clear, measurable economic metric that’s hard to game (e.g., total fees generated over 30 days).
@@ -79,8 +74,7 @@ The approach aligns the distribution of airdrops with metrics that are hard to g
 - Subjectivity: Delegates use their judgment and expertise to propose nuanced criteria for identifying valuable users and detecting Sybils. Delegates are incentivized to maxim
 - Objectivity: The mechanism rewards delegates based on the measurable economic impact of their decisions, not just their voting power or reputation.
 
-## Benefits of the Approach
-
+### Benefits of the Approach
 Why is this approach powerful? Let's break it down:
 
 **Adaptability**: As new Sybil tactics emerge, delegates can quickly adjust their voting strategies without requiring protocol-level changes. The rewards ensure these adaptations are driven by real economic improvements.
@@ -91,8 +85,7 @@ Why is this approach powerful? Let's break it down:
 
 **Economic Alignment:** By tying rewards directly to economic outcomes, the system ensures that delegates are motivated to make decisions that genuinely benefit the ecosystem, not just maximize their short-term gains.
 
-## In Practice
-
+### In Practice
 Imagine a new DeFi protocol, $FOO, using Filament for their token distribution. They might have:
 
 - Delegates analyzing on-chain transaction patterns across multiple chains
@@ -105,8 +98,7 @@ For example, if a delegate's proposed criteria led to a significant increase in 
 
 This creates a self-correcting system where the most effective Sybil-detection strategies naturally rise to the top, driven by real economic metrics rather than just stake or popularity.
 
-## Challenges Ahead
-
+## The Road Ahead
 There are several challenges that come with this approach. Here is we are looking forward to covering in future blogposts
 
 **Defining Appropriate Economic Metrics:** Choosing the right economic metrics to drive the  rewards is crucial. These metrics must align with the long-term health of the ecosystem, not just short-term gains.
@@ -115,8 +107,7 @@ There are several challenges that come with this approach. Here is we are lookin
 
 **Data Integrity:** Malicious actors might attempt to manipulate the underlying data to inflate their contributions or undermine competitors.  Filament must hold data providers accountable for the accuracy of their measurements and have mechanisms in place to incentivize data providers participate in a way that aligns with the other participants.
 
-## Wrapping Up
-
+### Wrapping Up
 Filament's approach, enhanced by a reward mechanism, represents a significant evolution in token distribution strategies. By combining the nuanced judgments of diverse delegates with objective economic incentives, it creates a system that is both adaptable to new Sybil tactics and grounded in real-world impact.
 
 This balanced approach to subjectivity and objectivity offers a promising path forward for fairer, more effective token distributions. As the crypto ecosystem continues to evolve, systems like Filament that capture collective intelligence while maintaining economic alignment will be crucial for sustainable growth and genuine community engagement.
