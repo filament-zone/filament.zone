@@ -77,7 +77,7 @@ The approach aligns the distribution of airdrops with metrics that are hard to g
 - Subjectivity: Delegates use their judgment and expertise to propose nuanced criteria for identifying valuable users and detecting Sybils. Delegates are incentivized to maxim
 - Objectivity: The mechanism rewards delegates based on the measurable economic impact of their decisions, not just their voting power or reputation.
 
-### Benefits of the Approach
+### Benefits
 Why is this approach powerful? Let's break it down:
 
 **Adaptability**: As new Sybil tactics emerge, delegates can quickly adjust their voting strategies without requiring protocol-level changes. The rewards ensure these adaptations are driven by real economic improvements.
