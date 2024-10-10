@@ -12,7 +12,7 @@ TL;DR: Filament introduces a novel approach to Sybil-resistant airdrops by lever
 
 Airdrops have become a cornerstone of token distribution strategies, but they're plagued by a persistent problem: the Sybils. At its core, Sybils are one entity masquerading as many, aiming to claim an outsized portion of tokens. Simple in concept, fiendishly difficult in practice.
 
-### I Know You Are But What Am I
+## I Know You Are But What Am I
 
 ![image.png](/publications/addressing-sybils/sybils.png)
 
@@ -54,7 +54,7 @@ However, EigenLayer's airdrop also [encountered issues](https://unchainedcrypto.
 
 Both projects employed advanced criteria for bootstrapping their initial token distribution and yet faced significant challenges. Wormhole's approach, while thorough, risked excluding legitimate users and created distribution delays. EigenLayer's criteria, although diverse, were still vulnerable to targeted farming and community backlash.
 
-These examples demonstrate that deterministic solutions often fail to fully capture the complexities of user intent. The rigid application of opaque criteria with arbitrary thresholds will  inevitably create edges that can be gamed or lead to false exclusions.
+These examples demonstrate that deterministic solutions often fail to fully capture the complexities of user intent. The rigid application of opaque criteria with arbitrary thresholds will inevitably create edges that can be gamed or lead to false exclusions.
 
 Moreover, both airdrops faced a common criticism: the difficulty for average users to understand or predict their eligibility. The criteria involves arbitrary thresholds that determine who benefits and who doesn’t. This lack of transparency can lead to community frustration and reduced engagement - the opposite of how initial token distributions should work.
 
@@ -62,7 +62,7 @@ These cases underscore the need for a more transparent, diverse approach to Sybi
 
 ## How Filament Addresses Sybils
 
-Filament introduces a new feedback loop that rewards a decentralized set of agents called delegates to identify Sybils based their subjective perspective while being rewarded for objective results. These delegates, whether human or AI, operate with public (though pseudo-anonymous) identities. Their actions are fully transparent and visible to the community, ensuring accountability. Here’s how it works in detail
+Filament introduces a new feedback loop that rewards a decentralized set of agents called delegates to identify Sybils based their subjective perspective while being rewarded for objective results. These delegates, whether human or AI, operate with public (though pseudo-anonymous) identities. Their actions are fully transparent and visible to the community, ensuring accountability. Here’s how it works in detail:
 
 1. Define Objective Metric: Campaigners (people running airdrops), define a clear, measurable economic metric that’s hard to game (e.g., total fees generated over 30 days).
 2. Criteria: Delegates propose and vote on criteria for distributing tokens, weighted by their stake
@@ -74,8 +74,8 @@ Filament introduces a new feedback loop that rewards a decentralized set of agen
 
 The approach aligns the distribution of airdrops with metrics that are hard to game ensuring productive distribution and durable community formation.  The key is to find a balance between the subjective nature of sybils in permissionless systems and objective measure of productivity aligned with community goals.
 
-- Subjectivity: Delegates use their judgment and expertise to propose nuanced criteria for identifying valuable users and detecting Sybils. Delegates are incentivized to maxim
-- Objectivity: The mechanism rewards delegates based on the measurable economic impact of their decisions, not just their voting power or reputation.
+- Subjectivity: Delegates use their expertise to propose criteria which they deem as valuable with their own subjective view of what constitutes a sybil.
+- Objectivity: The mechanism rewards delegates based on the measurable economic impact of their decisions, not just their voting power or reputation. This objective measure is hard to game and thefore filters out sybils.
 
 ### Benefits
 Why is this approach powerful? Let's break it down:
@@ -84,7 +84,7 @@ Why is this approach powerful? Let's break it down:
 
 **Privacy-Preservation:** Delegates can use private data sets to inform decisions without exposing sensitive information. Different credential systems can be integrated without enforcing public unified identities. The mechanism focuses on outcomes, not the specific data used.
 
-**Scalability:** The delegate network can grow and specialize, potentially creating experts in Sybil detection for specific ecosystems or attack vectors. The  rewards naturally allocate more influence to the most effective delegates.
+**Scalability:** The delegate network can grow and specialize, potentially creating experts in Sybil detection for specific ecosystems or attack vectors. The rewards naturally allocate more influence to the most effective delegates.
 
 **Economic Alignment:** By tying rewards directly to economic outcomes, the system ensures that delegates are motivated to make decisions that genuinely benefit the ecosystem, not just maximize their short-term gains.
 
