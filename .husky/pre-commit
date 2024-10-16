@@ -1,7 +1,4 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
-npm run test
+npm test
 npm run cms-gen
 npm run format
 npm run check

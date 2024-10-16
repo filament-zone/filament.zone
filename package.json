@@ -14,9 +14,11 @@
 		"lint": "prettier --check . && eslint . && markdownlint 'publications/*.md' '.github/**/*.md'",
 		"format": "prettier --plugin prettier-plugin-svelte --write '**/*' --ignore-unknown",
 		"cms-gen": "node --no-warnings=ExperimentalWarning --loader ts-node/esm src/scripts/cms-gen.ts",
-		"prepare": "husky init"
+		"prepare": "husky"
 	},
 	"devDependencies": {
+		"@eslint/eslintrc": "^3.1.0",
+		"@eslint/js": "^9.12.0",
 		"@sveltejs/adapter-auto": "^3.2.5",
 		"@sveltejs/adapter-cloudflare": "^4.7.2",
 		"@sveltejs/kit": "^2.7.0",
@@ -25,9 +27,10 @@
 		"@typescript-eslint/eslint-plugin": "^8.8.1",
 		"@typescript-eslint/parser": "^8.8.1",
 		"@vitest/coverage-v8": "^2.1.3",
-		"eslint": "^8.57.1",
+		"eslint": "^9.12.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.44.1",
+		"globals": "^15.11.0",
 		"husky": "^9.1.6",
 		"less": "^4.2.0",
 		"markdown-toc": "^1.2.0",
