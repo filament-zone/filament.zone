@@ -12,6 +12,7 @@
 	import MarkdownIt from 'markdown-it';
 	import MarkdownItAnchor from 'markdown-it-anchor';
 	import MarkdownItFootnote from 'markdown-it-footnote';
+	import MarkdownItTexMath from 'markdown-it-texmath';
 
 	import type { Publication } from '$lib/cms';
 
@@ -31,7 +32,8 @@
 		typographer: true,
 	})
 		.use(MarkdownItAnchor)
-		.use(MarkdownItFootnote);
+		.use(MarkdownItFootnote)
+		.use(MarkdownItTexMath);
 	md.renderer.rules.footnote_block_open = () => {
 		return '<hr /><h3 id="footnotes">Footnotes</h4>\n' + '<ol>\n';
 	};

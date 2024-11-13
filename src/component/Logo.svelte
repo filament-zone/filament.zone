@@ -2,7 +2,7 @@
 	export let dark: boolean = false;
 </script>
 
-<a href="/">
+<a href="/" aria-label="Logo">
 	<svg
 		width="227"
 		height="52"
