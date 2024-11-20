@@ -22,18 +22,18 @@
 
 	<div class="stats">
 		<div>
-			<h2>Impressions</h2>
-			<span>1.5M</span>
+			<h2 style="color: transparent;">Impressions</h2>
+			<span style="color: transparent;">1.5M</span>
 		</div>
 
 		<div>
-			<h2>Conversion</h2>
-			<span>5%</span>
+			<h2 style="color: transparent;">Conversion</h2>
+			<span style="color: transparent;">5%</span>
 		</div>
 
 		<div>
-			<h2>TVL</h2>
-			<span>10M</span>
+			<h2 style="color: transparent;">TVL</h2>
+			<span style="color: transparent;">10M</span>
 		</div>
 	</div>
 </div>
