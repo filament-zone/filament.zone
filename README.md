@@ -68,7 +68,26 @@ For Git-connected **Workers Builds**, set:
 | Deploy command  | `npx wrangler deploy --config wrangler.workers.jsonc` |
 | Node.js version | 22.12+ (for example, `NODE_VERSION=22.23.1`)          |
 
+For non-production branches, set the **Preview deploy command** (also called the
+**Non-production branch deploy command**) to:
+
+```sh
+npx wrangler preview --config wrangler.workers.jsonc
+```
+
+The Workers config includes the `previews` block required by this command. For a
+manual build and remote preview deployment, run `npm run deploy:workers:preview`.
+This publishes a remote Preview; `npm run preview:workers` only runs locally.
+
+Always pass `--config wrangler.workers.jsonc` for Workers commands. Bare
+`npx wrangler preview` reads the default `wrangler.jsonc`, which is the **Pages**
+configuration and cannot deploy this Workers build. Do not add `previews` to the
+Pages config to work around this error.
+
 Set `BREVO_API_KEY` as a **runtime secret** on the Worker, not a build variable.
+Worker Previews have separate secrets; configure the key for any Preview that
+needs newsletter subscriptions using `wrangler preview secret` with the same
+Workers config.
 
 ## Deploy to Cloudflare Pages
 

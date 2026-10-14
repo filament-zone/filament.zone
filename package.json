@@ -19,6 +19,7 @@
 		"preview:workers": "npm run build && wrangler dev --config wrangler.workers.jsonc",
 		"preview:pages": "npm run build:pages && wrangler pages dev",
 		"deploy:workers": "npm run build && wrangler deploy --config wrangler.workers.jsonc",
+		"deploy:workers:preview": "npm run build && wrangler preview --config wrangler.workers.jsonc",
 		"deploy:pages": "npm run build:pages && wrangler pages deploy",
 		"cf:types": "wrangler types --config wrangler.workers.jsonc",
 		"build:pages": "cross-env CF_PAGES=1 npm run build"
