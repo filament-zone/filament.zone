@@ -34,5 +34,5 @@ jobs:
       - run: npm run check
       - run: npm run lint
       - run: npm run build
-      - run: npx wrangler deploy --config wrangler.workers.jsonc --dry-run
+      - run: npx wrangler deploy --dry-run
       - run: npm run build:pages

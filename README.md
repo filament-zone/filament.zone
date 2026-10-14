@@ -45,13 +45,14 @@ because the current ESLint tooling does not support TypeScript 7 yet.
 
 ## Deploy to Cloudflare Workers (recommended)
 
-`wrangler.workers.jsonc` configures the generated Worker entry point and the `ASSETS`
-binding. Change its `name` if you want a different Worker name.
+The root `wrangler.jsonc` configures the generated Worker entry point, the `ASSETS`
+binding, and Worker Previews. Workers are the default deployment target, so normal
+Wrangler commands work without `--config`. Change its `name` to match your Worker.
 
 ```sh
 npx wrangler login
 npm run deploy:workers
-npx wrangler secret put BREVO_API_KEY --config wrangler.workers.jsonc
+npx wrangler secret put BREVO_API_KEY
 ```
 
 The initial deployment works without the key; subscriptions become available after
@@ -61,44 +62,45 @@ Settings → Domains & Routes** (the domain must be in your Cloudflare account).
 
 For Git-connected **Workers Builds**, set:
 
-| Setting         | Value                                                 |
-| --------------- | ----------------------------------------------------- |
-| Root directory  | Repository root                                       |
-| Build command   | `npm run build`                                       |
-| Deploy command  | `npx wrangler deploy --config wrangler.workers.jsonc` |
-| Node.js version | 22.12+ (for example, `NODE_VERSION=22.23.1`)          |
+| Setting         | Value                                        |
+| --------------- | -------------------------------------------- |
+| Root directory  | Repository root                              |
+| Build command   | `npm run build`                              |
+| Deploy command  | `npx wrangler deploy`                        |
+| Node.js version | 22.12+ (for example, `NODE_VERSION=22.23.1`) |
 
 For non-production branches, set the **Preview deploy command** (also called the
 **Non-production branch deploy command**) to:
 
 ```sh
-npx wrangler preview --config wrangler.workers.jsonc
+npx wrangler preview
 ```
 
 The Workers config includes the `previews` block required by this command. For a
 manual build and remote preview deployment, run `npm run deploy:workers:preview`.
 This publishes a remote Preview; `npm run preview:workers` only runs locally.
 
-Always pass `--config wrangler.workers.jsonc` for Workers commands. Bare
-`npx wrangler preview` reads the default `wrangler.jsonc`, which is the **Pages**
-configuration and cannot deploy this Workers build. Do not add `previews` to the
-Pages config to work around this error.
+Build the latest feature-branch commit for PR previews. If the log shows Vite 5,
+SvelteKit 2, or Wrangler 3, it is not using the updated PR tree: verify the checkout
+SHA in the build details before retrying. Both the PR head and GitHub merge ref
+contain the updated toolchain and Wrangler configuration.
 
 Set `BREVO_API_KEY` as a **runtime secret** on the Worker, not a build variable.
 Worker Previews have separate secrets; configure the key for any Preview that
-needs newsletter subscriptions using `wrangler preview secret` with the same
-Workers config.
+needs newsletter subscriptions using `wrangler preview secret`.
 
 ## Deploy to Cloudflare Pages
 
-`wrangler.jsonc` is the Pages configuration (Pages requires this standard filename). Its `name` must match your Pages
-project. To create and deploy a Direct Upload project:
+`cloudflare/pages/wrangler.jsonc` is the isolated Pages configuration. Pages
+requires a standard filename, so Pages commands use `--cwd cloudflare/pages`
+instead of a custom `--config` path. Its `name` must match your Pages project.
+To create and deploy a Direct Upload project:
 
 ```sh
 npx wrangler login
-npx wrangler pages project create filament-zone --production-branch main
+npx wrangler pages project create filament-zone --production-branch main --cwd cloudflare/pages
 npm run deploy:pages
-npx wrangler pages secret put BREVO_API_KEY --project-name filament-zone
+npx wrangler pages secret put BREVO_API_KEY --project-name filament-zone --cwd cloudflare/pages
 ```
 
 After adding/changing the Pages secret, deploy again so the new deployment receives
@@ -110,10 +112,10 @@ and use these settings:
 
 | Setting                | Value                                        |
 | ---------------------- | -------------------------------------------- |
-| Framework preset       | SvelteKit                                    |
-| Root directory         | Repository root                              |
-| Build command          | `npm run build:pages`                        |
-| Build output directory | `.svelte-kit/cloudflare`                     |
+| Framework preset       | None (custom build)                          |
+| Root directory         | `cloudflare/pages`                           |
+| Build command          | `cd ../.. && npm ci && npm run build:pages`  |
+| Build output directory | `../../.svelte-kit/cloudflare`               |
 | Node.js version        | 22.12+ (for example, `NODE_VERSION=22.23.1`) |
 
 Choose the project's production branch (`main` by default). Set `BREVO_API_KEY` as
@@ -126,8 +128,18 @@ For an explicit CLI preview deployment:
 
 ```sh
 npm run build:pages
-npx wrangler pages deploy --branch my-preview-branch
+npx wrangler pages deploy --cwd cloudflare/pages --branch my-preview-branch
 ```
+
+For local Pages subscriptions, copy your local secret file into the Pages config
+directory before `npm run preview:pages`:
+
+```sh
+cp .dev.vars cloudflare/pages/.dev.vars
+```
+
+Both local secret files are gitignored. Default Vite development uses the root
+Workers config and the root `.dev.vars`.
 
 ## CI and verification
 
