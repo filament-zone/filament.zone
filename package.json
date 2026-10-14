@@ -16,12 +16,12 @@
 		"cms-gen": "tsx src/scripts/cms-gen.ts",
 		"prepare": "husky",
 		"prebuild": "npm run cms-gen",
-		"preview:workers": "npm run build && wrangler dev --config wrangler.workers.jsonc",
-		"preview:pages": "npm run build:pages && wrangler pages dev",
-		"deploy:workers": "npm run build && wrangler deploy --config wrangler.workers.jsonc",
-		"deploy:workers:preview": "npm run build && wrangler preview --config wrangler.workers.jsonc",
-		"deploy:pages": "npm run build:pages && wrangler pages deploy",
-		"cf:types": "wrangler types --config wrangler.workers.jsonc",
+		"preview:workers": "npm run build && wrangler dev",
+		"preview:pages": "npm run build:pages && wrangler pages dev --cwd cloudflare/pages",
+		"deploy:workers": "npm run build && wrangler deploy",
+		"deploy:workers:preview": "npm run build && wrangler preview",
+		"deploy:pages": "npm run build:pages && wrangler pages deploy --cwd cloudflare/pages",
+		"cf:types": "wrangler types",
 		"build:pages": "cross-env CF_PAGES=1 npm run build"
 	},
 	"devDependencies": {

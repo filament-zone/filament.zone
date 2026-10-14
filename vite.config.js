@@ -8,7 +8,7 @@ const config = {
 		sveltekit({
 			preprocess: preprocess({ less: true }),
 			adapter: adapter({
-				config: process.env.CF_PAGES ? 'wrangler.jsonc' : 'wrangler.workers.jsonc',
+				config: process.env.CF_PAGES ? 'cloudflare/pages/wrangler.jsonc' : 'wrangler.jsonc',
 			}),
 		}),
 	],
