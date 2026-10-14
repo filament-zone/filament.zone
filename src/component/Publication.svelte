@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Publication } from '$lib/cms';
+	import type { Publication } from '#lib/cms';
 	import PublicationMeta from 'component/PublicationMeta.svelte';
 
 	export let publication: Publication;

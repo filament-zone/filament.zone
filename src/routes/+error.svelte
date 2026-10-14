@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 
 	import Container from 'component/Container.svelte';
 	import Page from 'component/Page.svelte';
@@ -7,7 +7,7 @@
 
 <Page>
 	<Container slot="hero">
-		<h1>{$page.status}: {$page.error?.message}</h1>
+		<h1>{page.status}: {page.error?.message}</h1>
 	</Container>
 
 	<div class="content" slot="content">

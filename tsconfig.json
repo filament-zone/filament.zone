@@ -1,5 +1,7 @@
 {
-	"extends": "./.svelte-kit/tsconfig.json",
+	"extends": "$app/tsconfig",
+	"include": ["src", "test", "*"],
+	"exclude": ["src/service-worker", "node_modules"],
 	"compilerOptions": {
 		"allowJs": true,
 		"checkJs": true,
@@ -8,17 +10,11 @@
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
 		"sourceMap": true,
-		"strict": true
-	},
-	"ts-node": {
-		"esm": true,
-		"experimentalResolver": true,
-		"files": true,
-		"transpileOnly": true,
-		"require": ["tsconfig-paths/register"]
+		"strict": true,
+		"paths": {
+			"component/*": ["./src/component/*"],
+			"cms/*": ["./src/cms/*"],
+			"styles/*": ["./src/styles/*"]
+		}
 	}
-	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
-	//
-	// If you want to overwrite includes/excludes, make sure to copy over the relevant includes/excludes
-	// from the referenced tsconfig.json - TypeScript does not merge them in
 }

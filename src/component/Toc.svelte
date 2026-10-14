@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { TOC } from '$lib/cms';
+	import type { TOC } from '#lib/cms';
 	import { onMount } from 'svelte';
 
 	export let toc: TOC;
@@ -29,7 +29,7 @@
 <svelte:window on:scroll={setActive} />
 
 <ul id="toc" class="top">
-	{#each toc as section, index}
+	{#each toc as section, index (section.slug)}
 		<li>
 			<a href="#{section.slug}" class:active={index === 0}>
 				<span class="index">{index + 1}</span>
@@ -37,7 +37,7 @@
 			</a>
 			{#if section.subs.length > 0}
 				<ul>
-					{#each section.subs as sub, subIndex}
+					{#each section.subs as sub, subIndex (sub.slug)}
 						<li>
 							<a href="#{sub.slug}">
 								<span class="index">{index + 1}.{subIndex + 1}</span>

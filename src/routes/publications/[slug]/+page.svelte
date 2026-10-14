@@ -1,11 +1,3 @@
-<script context="module" lang="ts">
-	export const load = () => ({
-		stuff: {
-			description: 'Description from page',
-		},
-	});
-</script>
-
 <script lang="ts">
 	import type { PageData } from './$types';
 
@@ -14,7 +6,7 @@
 	import MarkdownItFootnote from 'markdown-it-footnote';
 	import MarkdownItTexMath from 'markdown-it-texmath';
 
-	import type { Publication } from '$lib/cms';
+	import type { Publication } from '#lib/cms';
 
 	import Container from 'component/Container.svelte';
 	import Page from 'component/Page.svelte';

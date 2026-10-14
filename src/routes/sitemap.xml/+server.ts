@@ -1,4 +1,4 @@
-import { origin } from '$lib/info';
+import { origin } from '#lib/info';
 
 const pages = ['publications', 'community'];
 const headers = {

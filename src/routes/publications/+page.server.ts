@@ -1,4 +1,4 @@
-import { isPublished, type Publications } from '$lib/cms';
+import { isPublished, type Publications } from '#lib/cms';
 
 import pubs from 'cms/publications.json';
 
