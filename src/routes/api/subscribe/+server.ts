@@ -1,8 +1,10 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import { json } from '@sveltejs/kit';
-import { BREVO_API_KEY } from '$env/static/private';
-
-export const POST: RequestHandler = async ({ request }) => {
+export const POST: RequestHandler = async ({ request, platform }) => {
+	const apiKey = platform?.env.BREVO_API_KEY;
+	if (!apiKey) {
+		return json({ success: false, error: 'Subscription service unavailable' }, { status: 503 });
+	}
 	const { email, listIds, redirectionUrl, templateId } = await request.json();
 
 	const payload = {
@@ -16,7 +18,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		const response = await fetch('https://api.brevo.com/v3/contacts/doubleOptinConfirmation', {
 			method: 'POST',
 			headers: {
-				'api-key': BREVO_API_KEY as string,
+				'api-key': apiKey,
 				'Content-Type': 'application/json',
 			},
 			body: JSON.stringify(payload),

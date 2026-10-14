@@ -1,5 +1,6 @@
 import { readdir, readFile, writeFile } from 'node:fs/promises';
-import path from 'path';
+import path from 'node:path';
+import { format, resolveConfig } from 'prettier';
 
 import parseMD from 'parse-md';
 // @ts-expect-error: Package is missing types.
@@ -29,7 +30,10 @@ for (const file of files.filter((file) => {
 	publications[slug] = { metadata, content: parsed.content, slug, toc };
 }
 
-const out = JSON.stringify(publications);
+const out = await format(JSON.stringify(publications), {
+	...(await resolveConfig('./src/cms/publications.json')),
+	parser: 'json',
+});
 await writeFile('./src/cms/publications.json', out);
 
 export {};

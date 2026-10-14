@@ -1,7 +1,7 @@
 import { error } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 
-import type { Publications } from '$lib/cms';
+import type { Publications } from '#lib/cms';
 import pubs from 'cms/publications.json';
 
 const publications = pubs as Publications;

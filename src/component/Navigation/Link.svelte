@@ -1,12 +1,12 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 
 	export let href: string;
 	export let name: string;
 	export let dark: boolean = false;
 </script>
 
-<a {href} class:current={$page.url.pathname.includes(href)} class:dark>{name}</a>
+<a {href} class:current={page.url.pathname.includes(href)} class:dark>{name}</a>
 
 <style lang="less">
 	@import 'src/styles/typography.less';

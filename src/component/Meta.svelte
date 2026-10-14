@@ -1,14 +1,14 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 
-	$: origin = $page.url.origin;
-	$: pathname = $page.url.pathname;
-	$: url = `${origin}${pathname}`;
+	const origin = $derived(page.url.origin);
+	const pathname = $derived(page.url.pathname);
+	const url = $derived(`${origin}${pathname}`);
 
-	$: title = $page.data.meta?.title || 'Filament';
-	$: description = $page.data.meta?.description || 'Airdrops that work';
-	$: image = $page.data.meta?.image || `${origin}/img/logo.png`;
-	$: category = $page.data.meta?.category || 'website';
+	const title = $derived(page.data.meta?.title || 'Filament');
+	const description = $derived(page.data.meta?.description || 'Airdrops that work');
+	const image = $derived(page.data.meta?.image || `${origin}/img/logo.png`);
+	const category = $derived(page.data.meta?.category || 'website');
 </script>
 
 <svelte:head>

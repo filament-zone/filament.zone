@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 
-	import type { Publication } from '$lib/cms';
+	import type { Publication } from '#lib/cms';
 
 	import Container from 'component/Container.svelte';
 	import Page from 'component/Page.svelte';
@@ -18,7 +18,7 @@
 
 	<Container slot="content">
 		<div class="publications">
-			{#each publications as publication}
+			{#each publications as publication (publication.slug)}
 				<div class="publication">
 					<Pub {publication} />
 				</div>
